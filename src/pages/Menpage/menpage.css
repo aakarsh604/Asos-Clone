@@ -1,0 +1,52 @@
+.mencontainer {
+    background-color: #d19592;
+    background-image: linear-gradient(315deg, #d19592 0%, #f12659 74%);
+    
+}
+
+.conditions {
+    margin-top: 10px;
+    font-size: 10px;
+    background-color: transparent;
+    color : black;
+}
+
+.bigimagediv {
+    position: relative;
+}
+
+.summerbtn {
+    font-size: 50px;
+    background-color: white;
+    color : black;
+    position: relative;
+    top : -220px;
+    left : 100px;
+    width : 420px;
+    height : 80px;
+    letter-spacing: 1.5px;
+}
+
+.asosbtn {
+        position: relative;
+        top : -130px;
+        left : -200px;
+        color : black;
+        background-color: white;
+}
+
+.catebtn {
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 18px;
+    letter-spacing: 1px;
+    color : black;
+}
+
+.colordiv {
+    border-top: 10px solid #9659ff;
+    border-right: 10px solid #ccfb01;
+    border-bottom: 10px solid #f89eba;
+    border-left: 10px solid #ff465e;
+}
