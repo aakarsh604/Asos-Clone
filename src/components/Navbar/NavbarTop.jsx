@@ -2,6 +2,7 @@ import React from "react"
 import { Navbar, Nav,Container, Form, Button, FormControl } from "react-bootstrap"
 import { FaRegUser,FaHeart,FaShoppingBag } from "react-icons/fa";
 import "./Navbar.css"
+import Searchbar from "./Searchbar";
 const NavbarTop = () => {
     return (
         <Navbar expand="lg" bg="black" variant="dark" color="white" p="20px">
@@ -18,15 +19,8 @@ const NavbarTop = () => {
                         <Nav.Link href="#action2">WOMEN</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <Form className="d-flex form_controls">
-                    <FormControl
-                        type="search"
-                        placeholder="Search for items and brands"
-                        className="me-2 "
-                        aria-label="Search"
-                    />
-                </Form>
-                <Nav.Link href="/users"><FaRegUser/></Nav.Link>
+                  <Searchbar/>
+                <Nav.Link href="/login"><FaRegUser/></Nav.Link>
                 <Nav.Link href="#action2"><FaHeart /></Nav.Link>
                 <Nav.Link href="#action2"><FaShoppingBag /></Nav.Link>
             </Container>
