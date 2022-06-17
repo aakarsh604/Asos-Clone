@@ -12,7 +12,6 @@ export const showProducts = (dispatch,value) => {
   return axios
     .get(`http://localhost:8080/${value}`)
     .then((r) => {
-      //   console.log(r.data, "manish");
       dispatch({ type: PRODUCTS_SUCESS, payload: r.data });
     })
     .catch(() => {
@@ -22,8 +21,7 @@ export const showProducts = (dispatch,value) => {
 };
 
 export const sort = (dispatch, value, data) => {
-  // console.log(value,price)
-  //  dispatch({type: PRODUCTS_LOADING})
+  
   let array;
   switch(value){
 
