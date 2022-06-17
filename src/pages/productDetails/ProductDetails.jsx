@@ -1,8 +1,9 @@
-import axios from "axios";
+
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import styles from "./productDetails.module.css";
+import SimpleSlider from "./DataSlide"
 import {
   Button,
   Spinner,
@@ -10,48 +11,139 @@ import {
   ListItem,
   UnorderedList,
   Wrap,
+  WrapItem,
+  Alert,
+  AlertIcon,
   useToast,
-  WrapItem
+  Progress,
+  Stack,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  
 } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCartApi } from "../../store/cart/cart.actions";
+import {
+  addCartApi,
+  getproductdetailsApi,
+} from "../../store/cart/cart.actions";
+import { useRef } from "react";
+
+import { ChevronRightIcon } from "@chakra-ui/icons";
 const ProductDetails = () => {
-  const dispatch = useDispatch();
   const toast = useToast();
-  const {data,addItemCart:{loading,error}} = useSelector((state)=>state.cart)
-  const [productDetails, setProductDetails] = useState({});
+  const refSize = useRef(null);
+  const dispatch = useDispatch();
+  const location = useLocation();
+
+  let prevLocation;
+  if (location.state.pathname === "/products") {
+    prevLocation = "MEN";
+  } else if (location.state.pathname === "/womenpage") {
+    prevLocation = "WOMEN";
+  } else if(location.state.pathname==='/shoes'){
+    prevLocation = "SHOES"
+  }
+  else {
+    prevLocation = "";
+  }
+  
+  const {
+    detailsData: productDetails,
+    getProductDetails,
+    cartData,
+    addItemCart: { loading },
+  } = useSelector((state) => state.cart);
+
+  const [selectSize, setSelectSize] = useState(false);
   const [show, setShow] = React.useState(false);
   const { id } = useParams();
+  console.log(id)
 
   useEffect(() => {
-    axios
-      .get(` http://localhost:8080/Shoes/${id}`)
-      .then((res) => setProductDetails(res.data));
-
+    dispatch(getproductdetailsApi(id));
     return () => {};
   }, [id]);
 
-  let handleAddCart=()=>{
-    let new1 = data.some((el)=>(el.productName=== productDetails.BrandName)) 
-    if(!new1){
-      dispatch(addCartApi(productDetails))
-      if(!loading && !error){
-        return(
-          toast({
-            title: ` succesfully added`,
-            position:"top",
-            status: 'success',
-            isClosable: true,
-          })
-        )
-      }
-     
+  let handleAddCart = () => {
+    let s = refSize.current;
+    if (s === null) {
+      setSelectSize(true);
     }
-  }
+    let new1 = cartData.some((el) => el.id === productDetails.id);
+    if (!new1 && s) {
+      dispatch(addCartApi(productDetails, s));
+
+      return toast({
+        title: `successfully added`,
+        status: "success",
+        position: "top",
+        isClosable: true,
+      });
+    }
+  };
+  let handleSize = (e) => {
+    refSize.current = e.target.value;
+    setSelectSize(false);
+  };
   const handleToggle = () => setShow(!show);
+  if (getProductDetails.loading) {
+    return (
+      <div>
+        <Progress size="lg" isIndeterminate />
+      </div>
+    );
+  } else if (getProductDetails.error) {
+    return (
+      <div>
+        <Stack spacing={3}>
+          <Alert status="error">
+            <AlertIcon />
+            There was an error processing your request
+          </Alert>
+        </Stack>
+      </div>
+    );
+  }
   return (
     <div>
-      ProductDetails
+      <div className={styles.offerDiv}>
+        <div>
+          {/* women page link */}
+          <Link to={"/menpage"}>
+            <h3 className={styles.women}>WOMEN</h3>
+          </Link>
+        </div>
+        <div className={styles.sale}>
+          <h3>SALE: UP TO 70% OFF!</h3>
+          <h3>IT'S CALLED BIG DISCOUNT ENERGY</h3>
+        </div>
+        <div>
+          <Link to={"/menpage"}>
+            <h3 className={styles.men}>MEN</h3>
+          </Link>
+        </div>
+      </div>
+      <div className={styles.breadCrumbDiv}>
+        <Breadcrumb className={styles.breadCrumb}
+          spacing="8px"
+          separator={<ChevronRightIcon color='gray.500' />}
+        >
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          </BreadcrumbItem>
+
+         {prevLocation &&  <BreadcrumbItem>
+            <BreadcrumbLink href={location.state.pathname}>
+              {prevLocation}
+            </BreadcrumbLink>
+          </BreadcrumbItem>}
+
+          <BreadcrumbItem isCurrentPage>
+            <p>{productDetails.Brand_Name}</p>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      </div>
       <div className={styles.uperDiv}>
         <div className={styles.imgDiv}>
           <div className={styles.smallimgDiv}>
@@ -65,37 +157,55 @@ const ProductDetails = () => {
         </div>
         <div className={styles.detailsDiv}>
           <div className={styles.brand}>
-            <p>{productDetails.BrandName}</p>
+            <p>{productDetails.Brand_Name}</p>
           </div>
           <div className={styles.price}>
             <h4>{`£${productDetails.Price}`}</h4>
           </div>
           <div className={styles.color}>
-            <span className={styles.cspan}>COLOUR: </span> ECRU
+            <span className={styles.cspan}>COLOUR: </span>{" "}
+            {productDetails.color}
           </div>
           <div className={styles.sizeDiv}>
             <h5 className={styles.sizeH}>SIZE:</h5>
             <div>
-              <select className={styles.select}>
-                <option>Please select</option>
-                <option value={"2XS"}>2XS - chest 34</option>
-                <option value={"XS"}>XS - chest 36</option>
-                <option value={"S"}>S - chest 38</option>
-                <option value={"M"}>M - chest 40</option>
-                <option value={"L"}>L - chest 42</option>
-                <option value={"XL"}>XL - chest 44</option>
+              <select
+                className={styles.select}
+                onChange={(e) => {
+                  handleSize(e);
+                }}
+              >
+                <option hidden>Please select</option>
+                <option value={"2XS"}>2XS </option>
+                <option value={"XS"}>XS </option>
+                <option value={"S"}>S </option>
+                <option value={"M"}>M </option>
+                <option value={"L"}>L</option>
+                <option value={"XL"}>XL </option>
               </select>
             </div>
           </div>
+          {selectSize && (
+            <div className={styles.chooseSize}>
+              Please select from the available colour and size options
+            </div>
+          )}
           <div className={styles.btnDiv}>
-          <Wrap>
-         <WrapItem>
-            <button className={styles.btnCart}  onClick={()=>{handleAddCart()
-                   
-
-            }}><div className={styles.spin}>{loading&&<Spinner  color='white' />}</div><div className={styles.insidebtn}>ADD TO BAG</div></button>
-            </WrapItem>
-          </Wrap>
+            <Wrap>
+              <WrapItem>
+                <button
+                  className={styles.btnCart}
+                  onClick={() => {
+                    handleAddCart();
+                  }}
+                >
+                  <div className={styles.spin}>
+                    {loading && <Spinner color="white" />}
+                  </div>
+                  <div className={styles.insidebtn}>ADD TO BAG</div>
+                </button>
+              </WrapItem>
+            </Wrap>
           </div>
           <div className={styles.delivery}>
             <div className={styles.iconDiv}>
@@ -117,28 +227,33 @@ const ProductDetails = () => {
           <div className={styles.innerlower}>
             <div className={styles.innerLowerone}>
               <h2 className={styles.h2}>PRODUCT DETAILS</h2>
-              <p className={styles.p}><span className={styles.uSpan}>Product</span> by <span className={styles.uSpan}>ASOS DESIGN</span></p>
+              <p className={styles.p}>
+                <span className={styles.uSpan}>Product</span> by{" "}
+                <span className={styles.uSpan}>ASOS DESIGN</span>
+              </p>
               <div className={styles.ul}>
-              <UnorderedList >
-                <ListItem>Next stop: checkout</ListItem>
-                <ListItem>Wolverine design</ListItem>
-                <ListItem>Crew neck</ListItem>
-                <ListItem>Short sleeves</ListItem>
-                <ListItem>Oversized fit</ListItem>
-              </UnorderedList>
+                <UnorderedList>
+                  <ListItem>Next stop: checkout</ListItem>
+                  <ListItem>Wolverine design</ListItem>
+                  <ListItem>Crew neck</ListItem>
+                  <ListItem>Short sleeves</ListItem>
+                  <ListItem>Oversized fit</ListItem>
+                </UnorderedList>
               </div>
-              
             </div>
             <div className={styles.innerLowertwo}>
               <h2 className={styles.h2}>PRODUCT CODE</h2>
-              <p className={styles.p}>{Math.floor(Math.random() * 10000000) + 10000000}</p>
+              <p className={styles.p}>
+                {Math.floor(Math.random() * 10000000) + 10000000}
+              </p>
               <div>
                 <h3 className={styles.h3}>BRAND</h3>
                 <p className={styles.p}>
-                  This is <span className={styles.uSpan}>ASOS DESIGN</span> – your go-to for all the latest trends, no
-                  matter who you are, where you’re from and what you’re up to.
-                  Exclusive to ASOS, our universal brand is here for you, and
-                  comes in Plus and Tall. Created by us, styled by you.
+                  This is <span className={styles.uSpan}>ASOS DESIGN</span> –
+                  your go-to for all the latest trends, no matter who you are,
+                  where you’re from and what you’re up to. Exclusive to ASOS,
+                  our universal brand is here for you, and comes in Plus and
+                  Tall. Created by us, styled by you.
                 </p>
               </div>
             </div>
@@ -148,7 +263,9 @@ const ProductDetails = () => {
               <p className={styles.p1}>Model is wearing: Size Medium</p>
               <div>
                 <h2 className={styles.h3}>LOOK AFTER ME</h2>
-                <p className={styles.p}>Machine wash according to instructions on care label</p>
+                <p className={styles.p}>
+                  Machine wash according to instructions on care label
+                </p>
               </div>
               <div>
                 <h2 className={styles.h3}>ABOUT ME</h2>
@@ -162,11 +279,21 @@ const ProductDetails = () => {
                 <p className={styles.p2}>Main: 100% Good Quality.</p>
               </div>
             </div>
-          </div> 
+          </div>
         </Collapse>
-        <Button className={styles.btn2} size="md" backgroundColor={"white"} onClick={handleToggle} mt="1rem">
+        <Button
+          className={styles.btn2}
+          size="md"
+          backgroundColor={"white"}
+          onClick={handleToggle}
+          mt="1rem"
+        >
           Show {show ? "Less" : "More"}
         </Button>
+      </div>
+      <div className={styles.like}>
+      <h1 className={styles.h1Like}>YOU MIGHT ALSO LIKE</h1>
+      <SimpleSlider />
       </div>
     </div>
   );
