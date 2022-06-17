@@ -1,6 +1,5 @@
 
 import './App.css';
-import Home from './pages/Home';
 import Navigation from "./components/Navbar/Navbar";
 import Login from './pages/Login';
 import MenPage from "./pages/Menpage/MenPage"
@@ -10,21 +9,26 @@ import Cart from './pages/cartPage/Cart';
 import Shoes from './pages/Productspage/Shoes';
 import MensClothing from './pages/Productspage/MensClothing'
 import WomensClothing from './pages/Productspage/WomensClothing'
+import Footer from './components/footer/Footer';
+import WomenPage from './pages/Womenpage/WomenPage';
+import Homepage from './pages/Home/Homepage';
 
 function App() {
   return (
     <div className="App">
       <Navigation/>
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
+          <Route path="/" element={ <Homepage/> } />
+          <Route path="/women" element={ <WomenPage/>} /> 
+          <Route path="/men" element={ <MenPage/>} /> 
           <Route path='/login' element={<Login/>}></Route>
-          <Route path="/menpage" element={ <MenPage/> } />
           <Route path='/productdetails/:id' element={<ProductDetails/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/products/shoes' element={<Shoes/>}></Route>
           <Route path='/products/mensclothing' element={<MensClothing/>}></Route>
           <Route path='/products/womensclothing' element={<WomensClothing/>}></Route>
         </Routes>
+        <Footer/>
     </div>
   );
 }
