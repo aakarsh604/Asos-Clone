@@ -17,8 +17,8 @@ export default class MultipleItems extends Component {
       speed: 500,
       slidesToShow: 6,
       slidesToScroll: 1,
-      nextArrow : <ChevronRightIcon color="white" mr="-30px" _hover={{color : "white"}} viewBox="4 6 20 13"/>,
-      prevArrow : <ChevronLeftIcon color="white" ml="-30px" _hover={{color : "white"}} viewBox="4 6 20 13"/>,
+      nextArrow : <ChevronRightIcon bg="#d87f87" color="white" mr="-30px" _hover={{color : "white"}} viewBox="4 6 20 13"/>,
+      prevArrow : <ChevronLeftIcon bg="#ef2b5c" color="white" ml="-30px" _hover={{color : "white"}} viewBox="4 6 20 13"/>,
     };
 
     return (

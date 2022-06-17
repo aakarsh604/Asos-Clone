@@ -8,8 +8,8 @@ import menSale from "../../data/menSale.json";
 import MenSaleCard from "./MenSaleCard";
 import pic1 from "../../assets/img1.png";
 import pic2 from "../../assets/img2.png";
-import Footer from "../../components/footer/Footer";
 import Salebar from "../Womenpage/Salebar";
+import { Link } from "react-router-dom";
 
 const MenPage = () => {
   return (
@@ -41,6 +41,7 @@ const MenPage = () => {
         <Box>
           <SimpleSlider />
         </Box>
+        <Link to="/products/mensclothing">
         <Button
           rounded="0px"
           mt="25px"
@@ -53,6 +54,7 @@ const MenPage = () => {
         >
           VIEW ALL
         </Button>
+        </Link>
         <p className="conditions">
           Limited time only. Selected styles marked down as shown.
         </p>
@@ -74,7 +76,7 @@ const MenPage = () => {
         >
           Summer juice
         </Button>
-        <Button
+        <Link to="/products/mensclothing"><Button
           className="asosbtn"
           h="45px"
           p="25px"
@@ -83,7 +85,7 @@ const MenPage = () => {
           _hover={{ color: "white", backgroundColor: "black" }}
         >
           SHOP ASOS DESIGN
-        </Button>
+        </Button></Link>
       </Box>
 
       <Flex w="83%" m="auto" gap="20px">
@@ -115,7 +117,7 @@ const MenPage = () => {
           <Text fontWeight="600" mt="10px">
             Top-Tier threads
           </Text>
-          <Button
+          <Link to="/products/mensclothing"><Button
             bg="white"
             fontWeight={700}
             h="55px"
@@ -124,7 +126,7 @@ const MenPage = () => {
             _hover={{ color: "white", backgroundColor: "black" }}
           >
             SHOP THE BRAND
-          </Button>
+          </Button></Link>
         </Flex>
         <Flex direction="column" justify="center" w="50%" align="center">
           <Box className="colordiv" w="85%">
@@ -142,7 +144,7 @@ const MenPage = () => {
           <Text fontWeight="600" mt="10px">
             Evrythings's just beachy
           </Text>
-          <Button
+          <Link to="/products/mensclothing"><Button
             bg="white"
             fontWeight={700}
             h="55px"
@@ -151,7 +153,7 @@ const MenPage = () => {
             _hover={{ color: "white", backgroundColor: "black" }}
           >
             SHOP NOW
-          </Button>
+          </Button></Link>
         </Flex>
       </Flex>
 

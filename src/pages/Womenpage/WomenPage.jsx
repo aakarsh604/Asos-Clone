@@ -8,8 +8,8 @@ import womenSale from "../../data/womenSale.json"
 import MenSaleCard from '../Menpage/MenSaleCard';
 import pic1 from "../../assets/img3.png"
 import pic2 from "../../assets/img4.png"
-import Footer from '../../components/footer/Footer';
 import Salebar from './Salebar';
+import { Link } from 'react-router-dom';
 
 
 const WomenPage = () => {
@@ -23,14 +23,15 @@ const WomenPage = () => {
                 <Box>
                     <SimpleSlider/>
                 </Box>
-                <Button rounded="0px" mt="25px" h="45px" w="170px" fontWeight="700" color="black" letterSpacing="2px" _hover={{color : "white", backgroundColor : "black"}}>VIEW ALL</Button>
+                <Link to="/products/womensclothing">
+                <Button rounded="0px" mt="25px" h="45px" w="170px" fontWeight="700" color="black" letterSpacing="2px" _hover={{color : "white", backgroundColor : "black"}}>VIEW ALL</Button></Link>
                 <p className='conditions'>Limited time only. Selected styles marked down as shown.</p>
         </Box> 
 
         <Box className="bigimagediv">
         <Image m="auto" mt="50px" src="https://content.asos-media.com/-/media/homepages/ww/2022/june/06/hero/hero_1258x600.jpg"></Image>
         <Button size="6xl" className="summerbtnwomen" rounded="0px" fontWeight="700" fontSize="6xl"  _hover={{backgroundColor : "white"}}>Festi-gal</Button>
-        <Button className="asosbtnwomen" h="45px" p="25px" rounded="0px" fontWeight="700" _hover={{color : "white", backgroundColor : "black"}}>SHOP ASOS DESIGN</Button>
+        <Link to="/products/womensclothing"><Button className="asosbtnwomen" h="45px" p="25px" rounded="0px" fontWeight="700" _hover={{color : "white", backgroundColor : "black"}}>SHOP ASOS DESIGN</Button></Link>
         </Box>
 
         <Flex w="83%" m="auto" gap="20px">
@@ -46,13 +47,13 @@ const WomenPage = () => {
             <Box className="colordiv" w="85%"><Image src={pic1}/></Box>
             <Heading color="black" fontSize="28px" mt="20px" fontWeight="700" letterSpacing="1px">ASOS EDITION</Heading>
             <Text fontWeight="600" mt="10px">Material girl</Text>
-            <Button bg="white" fontWeight={700} h="55px" className="catebtn" rounded="0px" _hover={{color : "white", backgroundColor : "black"}}>SHOP THE BRAND</Button>
+            <Link to="/products/womensclothing"><Button bg="white" fontWeight={700} h="55px" className="catebtn" rounded="0px" _hover={{color : "white", backgroundColor : "black"}}>SHOP THE BRAND</Button></Link>
           </Flex>
           <Flex direction="column" justify="center" w="50%" align="center">
           <Box className="colordiv" w="85%"><Image src={pic2}/></Box>
           <Heading color="black" fontSize="28px" mt="20px" fontWeight="700" letterSpacing="1px">SUMMER ROMANCE</Heading>
           <Text fontWeight="600" mt="10px">Ruffle some feathers</Text>
-          <Button bg="white" fontWeight={700} h="55px" className="catebtn" rounded="0px" _hover={{color : "white", backgroundColor : "black"}}>SHOP ASOS DESIGN</Button>
+          <Link to="/products/womensclothing"><Button bg="white" fontWeight={700} h="55px" className="catebtn" rounded="0px" _hover={{color : "white", backgroundColor : "black"}}>SHOP ASOS DESIGN</Button></Link>
           </Flex>
         </Flex>
 
