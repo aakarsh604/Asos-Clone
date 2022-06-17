@@ -37,12 +37,12 @@
     width: 100%;
     height: 120px;
   }
-  .flex_box {
+  /* .flex_box {
     border: 1px solid blue;
     display: grid;
     grid-template-columns: repeat(2, 12em);
     grid-template-rows: auto;
-  }
+  } */
   .products {
     /* border: 1px solid blue; */
     width: 90%;
@@ -109,13 +109,7 @@
     /* padding: 5px; */
     gap: 10px;
   }
-  .filter_box {
-    /* border: 1px solid grey;
-      background-color: #eeeeee;
-      width: 100%;
-      height: 250px; */
-    display: none;
-  }
+
 
 
   /* .Flex{
