@@ -1,0 +1,85 @@
+.mencontainer {
+    background-color: #d19592;
+    background-image: linear-gradient(315deg, #d19592 0%, #f12659 74%);
+    
+}
+
+.conditions {
+    margin-top: 10px;
+    font-size: 10px;
+    background-color: transparent;
+    color : black;
+}
+
+.bigimagediv {
+    position: relative;
+}
+
+.summerbtnwomen {
+    font-size: 50px;
+    background-color: white;
+    color : black;
+    position: relative;
+    top : -220px;
+    left : 110px;
+    width : 270px;
+    height : 80px;
+    letter-spacing: 1.5px;
+}
+
+.asosbtnwomen {
+        position: relative;
+        top : -120px;
+        left : -120px;
+        color : black;
+        background-color: white;
+}
+
+.catebtn {
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 18px;
+    letter-spacing: 1px;
+    color : black;
+}
+
+.colordiv {
+    border-top: 10px solid #9659ff;
+    border-right: 10px solid #ccfb01;
+    border-bottom: 10px solid #f89eba;
+    border-left: 10px solid #ff465e;
+}
+
+.brandboxwo > div {
+    width: 250px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brandboxwo > :nth-child(2) img,
+.brandboxwo > :nth-child(5) img{
+        height: 200px;
+        width: 200px;
+}
+
+.salebardiv{
+    height: 55px;
+    width: 100%;
+    background-color: #f12659;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    padding : 0px 120px;
+    align-items: center;
+}
+
+.salebarsub {
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        line-height: 15px;
+        color : black;
+}
