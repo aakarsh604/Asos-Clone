@@ -5,14 +5,14 @@
       "Brand_Name": "ASOS DESIGN chunky sole mule loafer in drenched stone",
       "Price": "40.01",
       "id": 1,
-      "color": "pink"
+      "color": "Pink"
     },
     {
       "Image": "https://images.asos-media.com/products/vans-old-skool-trainers-in-orange/201666941-1-orange?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "River Island round toe derby shoes in brown",
       "Price": "37.40",
       "id": 2,
-      "color": "orange"
+      "color": "ORANGE"
     },
     {
       "Image": "https://images.asos-media.com/products/vans-style-36-colour-block-trainers-in-beige-brown/201667618-1-multi?$n_320w$&wid=317&fit=constrain",
@@ -26,35 +26,35 @@
       "Brand_Name": "River Island leather boots in dark brown",
       "Price": "63.07",
       "id": 4,
-      "color": "black"
+      "color": "Black"
     },
     {
       "Image": "https://images.asos-media.com/products/river-island-patent-tassle-loafer-in-black/203330323-1-black?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "River Island lace up trainer in white",
       "Price": "48.04",
       "id": 5,
-      "color": "black"
+      "color": "Black"
     },
     {
       "Image": "https://images.asos-media.com/products/puma-ralph-sampson-trainer-in-black-and-white/203268792-1-black?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "River Island lace up derby shoes in black",
       "Price": "58.07",
       "id": 6,
-      "color": "white"
+      "color": "White"
     },
     {
       "Image": "https://images.asos-media.com/products/puma-training-retaliate-trainers-in-white-and-black/22502829-1-white?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "Puma runner trainer in white",
       "Price": "90.09",
       "id": 7,
-      "color": "pink"
+      "color": "Pink"
     },
     {
       "Image": "https://images.asos-media.com/products/new-balance-hierro-trainers-in-sand/201100347-1-beige?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "Puma Running Aviator trainers in blue",
       "Price": "68.25",
       "id": 8,
-      "color": "beige-brown"
+      "color": "Beige-Brown"
     },
     {
       "Image": "https://images.asos-media.com/products/nike-air-force-1-luxe-trainers-with-chunky-gum-sole-in-black/23592550-1-black?$n_320w$&wid=317&fit=constrain",
@@ -68,21 +68,21 @@
       "Brand_Name": "Rains x Palladium Pallashock HKR low boots in off white",
       "Price": "142.05",
       "id": 10,
-      "color": "grey & blue"
+      "color": "Grey & Blue"
     },
     {
       "Image": "https://images.asos-media.com/products/asos-design-trainer-in-white-with-green-back-tab/201854206-1-white?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "Lacoste croco sliders in black",
       "Price": "32.05",
       "id": 11,
-      "color": "green black"
+      "color": "Green Black"
     },
     {
       "Image": "https://images.asos-media.com/products/adidas-originals-nmdr1-primeblue-trainers-in-white/201525931-1-white?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "Dr Martens Jarrick Lo 3 Tie Shoes Black Smooth",
       "Price": "159.07",
       "id": 12,
-      "color": "white"
+      "color": "White"
     },
     {
       "Image": "https://images.asos-media.com/products/adidas-originals-adi2000-trainers-in-purple/200908017-1-purple?$n_320w$&wid=317&fit=constrain",
@@ -96,21 +96,21 @@
       "Brand_Name": "Dr Martens Jarrick Lo 3 Tie Shoes Black Smooth",
       "Price": "159.05",
       "id": 14,
-      "color": "blue"
+      "color": "Blue"
     },
     {
       "Image": "https://images.asos-media.com/products/river-island-wide-fit-leather-brogue-shoes-in-black/203228243-1-black?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "Dr Martens Jarrick Lo 3 Tie Shoes Black Smooth",
       "Price": "159.08",
       "id": 15,
-      "color": "black"
+      "color": "Black"
     },
     {
       "Image": "https://images.asos-media.com/products/river-island-lace-up-trainer-in-white/203218449-1-white?$n_320w$&wid=317&fit=constrain",
       "Brand_Name": "Dr Martens Jarrick Lo 3 Tie Shoes Black Smooth",
       "Price": "159.08",
       "id": 16,
-      "color": "white"
+      "color": "White"
     }
   ],
   "Men": [
@@ -296,7 +296,7 @@
       "Brand_Name": "South Beach Maternity full zip nursing mid support sports bra in cedar rose",
       "Price": "14.25",
       "id": 42,
-      "color": "PINK"
+      "color": "Pink"
     },
     {
       "Image": "https://images.asos-media.com/products/adidas-football-tiro-essential-t-shirt-in-black-and-pink/200952425-1-pink?$n_320w$&wid=317&fit=constrain",
@@ -310,7 +310,7 @@
       "Brand_Name": "ASOS DESIGN bare shoulder prom midi dress in forest green",
       "Price": "65.00",
       "id": 44,
-      "color": " Forest green"
+      "color": " Green"
     },
     {
       "Image": "https://images.asos-media.com/products/asos-design-cut-work-lace-pinny-midi-dress/14790175-1-sage?$n_640w$&wid=513&fit=constrain",
@@ -331,7 +331,7 @@
       "Brand_Name": "ASOS DESIGN high neck pleated long sleeve skater midi dress with embroidery",
       "Price": "50.00",
       "id": 47,
-      "color": "DUSKY PINK"
+      "color": "PINK"
     },
     {
       "Image": "https://images.asos-media.com/products/miss-selfridge-jersey-shirred-midi-dress-in-rose-pink/200965288-1-pink?$n_640w$&wid=513&fit=constrain",
@@ -354,7 +354,7 @@
       "Brand_Name": "River Island round toe derby shoes in brown",
       "Price": "37.40",
       "id": 2,
-      "color": "orange"
+      "color": "Orange"
     },
     {
       "Image": "https://images.asos-media.com/products/vans-style-36-colour-block-trainers-in-beige-brown/201667618-1-multi?$n_320w$&wid=317&fit=constrain",

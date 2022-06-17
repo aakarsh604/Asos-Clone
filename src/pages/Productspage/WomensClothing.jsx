@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 
-import "../Productspage/Products.css";
+import styles from './Shoes.module.css';
 import { useEffect } from "react";
 import { showProducts, sort } from "../../store/ProductsStore/products.action";
 import { useDispatch, useSelector } from "react-redux";
@@ -28,20 +28,24 @@ const WomensClothing = () => {
   }, [dispatch]);
 
   const handleOnSelect = (e) => {
+    // e.preventDefault()
     const { value } = e.target;
-    // console.log(value);
-    sort(dispatch, value, data);
+    console.log(value);
+    // let keys = Object.keys(data[1]);
+    // console.log('keys',keys)
+
+    sort(dispatch, value, data , "Women");
   };
 
   if (loading)
     return (
-      <div className="loading">
+      <div className={styles.loading}>
         <h1>LOADING</h1>
       </div>
     );
   if (error)
     return (
-      <div className="error">
+      <div className={styles.error}>
         <h1>SOMETHING WENT WRONG.......</h1>
       </div>
     );
@@ -56,17 +60,17 @@ const WomensClothing = () => {
           marginTop: "0px",
         }}
       >
-        <div className="breadcrum">
+        <div className={styles.breadcrum}>
           <Breadcrumb separator=">" fontSize={14}>
             <BreadcrumbItem>
-              <BreadcrumbLink href="http://localhost:3001/" fontSize={14}>
+              <BreadcrumbLink href="/" fontSize={14}>
                 Home
               </BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem>
               <BreadcrumbLink
-                href="http://localhost:3001/menpage"
+                href="/women"
                 fontSize="14px"
               >
                 Men
@@ -81,19 +85,19 @@ const WomensClothing = () => {
 
             <BreadcrumbItem isCurrentPage>
               <BreadcrumbLink href="#" fontSize={14} color="grey">
-                New In: women clothes
+                New In: women clothing
               </BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
         </div>
       </div>
-      <div style={{ border: "1px solid grey", width: "100%", height: "220px" }}>
-        <div className="headline">
-          <h1>Women's New in: Women</h1>
+      <div className={styles.headline_box} style={{ border: "1px solid grey", width: "100%", height: "220px" }}>
+        <div className={styles.headline}>
+          <h1>Men's New in: Shoes</h1>
           <p>
             If you needed another excuse to build on your footwear collection,
-            our edit of women's new clothes is a pretty good one. We've rounded
-            up new men's trainers, shoes and men's new boots from some of your
+            our edit of men's new shoes is a pretty good one. We've rounded up
+            new men's trainers, shoes and men's new boots from some of your
             favourite brands (think Nike, adidas Originals, Dr. Martens and ASOS
             DESIGN) to bring you the latest shoe styles all in one place. Jack &
             Jones, New Look and River Island are in the mix, too, with
@@ -102,8 +106,9 @@ const WomensClothing = () => {
           </p>
         </div>
       </div>
-      <div className="filter_box">
-        <Flex position="relative" top={2} left={110}>
+      <div className={styles.filter_box}>
+        <Flex className={styles.flex_box} position="relative" top={2} left={110}>
+        {/* <div className={styles.flex_box}> */}
           <Stack spacing={3}>
             <Select
               variant="filled"
@@ -139,12 +144,12 @@ const WomensClothing = () => {
               onChange={(e) => handleOnSelect(e)}
             >
               <option value="none">All Colors</option>
-              <option value="black">black</option>
-              <option value="orange">orange</option>
-              <option value="green">green</option>
-              <option value="white">white</option>
-              <option value="blue">blue</option>
-              <option value="beige-brown">beige brown</option>
+              <option value="Black">black</option>
+              <option value="Orange">orange</option>
+              <option value="Green">green</option>
+              <option value="White">white</option>
+              <option value="Blue">blue</option>
+              <option value="Beige-Brown">beige brown</option>
             </Select>
             <Select variant="filled" placeholder="Body Fit" w={200} ml={3} />
           </Stack>
@@ -155,24 +160,25 @@ const WomensClothing = () => {
             <Select variant="filled" placeholder="Price Range" w={200} ml={3} />
           </Stack>
         </Flex>
+        {/* </div> */}
       </div>
       <div>
-        <p>No of items</p>
+        <p>{data.length} styles found</p>
       </div>
 
-      <div className="products">
+      <div className={styles.products}>
         {data.map((el) => (
-         <div id="items" key={el.id}>
-         <Link to={`/productdetails/${el.id}`} state={from}>
-         <img src={el.Image} alt="" />
-         <div id="name_div">
-           <h2> {el.Brand_Name}</h2>
-         </div>
-         <div id="price_div">
-           <h3>{`£ ${+(el.Price)}`}</h3>
-         </div>
-         </Link>
-       </div>
+          <div id={styles.items} key={el.id}>
+          <Link to={`/productdetails/${el.id}`} state={from}>
+          <img src={el.Image} alt="" />
+          <div id={styles.name_div}>
+            <h2> {el.Brand_Name}</h2>
+          </div>
+          <div id={styles.price_div}>
+            <h3>{`£ ${+(el.Price)}`}</h3>
+          </div>
+          </Link>
+        </div>
         ))}
       </div>
     </div>
