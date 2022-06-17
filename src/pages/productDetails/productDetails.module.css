@@ -202,45 +202,13 @@
     padding: 8px;
     background-color: #fae7ec;
 }
-.offerDiv{
-    display:flex;
-    background-color:#ff385c;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px;
-}
-.women,.men{
-    border: 1px solid black;
-    padding: 7px 15px;
-    font-weight: bold;
-    font-size: small;
-}
-.men{
-    padding: 7px 25px;
-}
-.sale{
-   
-    width: 50%;
-    font-weight: bolder;
-    font-size: small;
-    letter-spacing: 1px;
-    padding: 5px;
-    cursor:default;
-}
-
-.men:hover{
-    color: rgb(80, 71, 71);
-}
-.women:hover{
-    color: rgb(80, 71, 71);
-}
 .bigDiv{
     background-color: #eeeeee;
 }
 .bigImg {
     transform-origin: 65% 75%;  transition: transform 1s, filter .5s ease-out;
     cursor: zoom-in;
-  }
+}
   
 .bigImg:active {
     -webkit-transform: scale(2);
@@ -261,9 +229,10 @@
    
     width: 65%;
     margin: auto;
-    height: 300px;
+    height: 450px;
     margin-top: 40px;
     border-top: 1px solid rgb(211, 208, 208);
+   
   }
   .h1Like{
     text-align: left;

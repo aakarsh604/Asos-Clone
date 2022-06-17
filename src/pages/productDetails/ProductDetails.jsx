@@ -107,23 +107,6 @@ const ProductDetails = () => {
   }
   return (
     <div>
-      <div className={styles.offerDiv}>
-        <div>
-          {/* women page link */}
-          <Link to={"/menpage"}>
-            <h3 className={styles.women}>WOMEN</h3>
-          </Link>
-        </div>
-        <div className={styles.sale}>
-          <h3>SALE: UP TO 70% OFF!</h3>
-          <h3>IT'S CALLED BIG DISCOUNT ENERGY</h3>
-        </div>
-        <div>
-          <Link to={"/menpage"}>
-            <h3 className={styles.men}>MEN</h3>
-          </Link>
-        </div>
-      </div>
       <div className={styles.breadCrumbDiv}>
         <Breadcrumb className={styles.breadCrumb}
           spacing="8px"
