@@ -107,8 +107,8 @@ const Shoes = () => {
         </div>
       </div>
       <div className={styles.filter_box}>
-        {/* <Flex className={styles.flex_box} position="relative" top={2} left={110}> */}
-        <div className={styles.flex_box}>
+        <Flex className={styles.flex_box} position="relative" top={2} left={110}>
+        {/* <div className={styles.flex_box}> */}
           <Stack spacing={3}>
             <Select
               variant="filled"
@@ -159,8 +159,8 @@ const Shoes = () => {
           <Stack spacing={3}>
             <Select variant="filled" placeholder="Price Range" w={200} ml={3} />
           </Stack>
-        {/* </Flex> */}
-        </div>
+        </Flex>
+        {/* </div> */}
       </div>
       <div>
         <p>{data.length} styles found</p>

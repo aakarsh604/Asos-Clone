@@ -107,7 +107,7 @@ const WomensClothing = () => {
         </div>
       </div>
       <div className={styles.filter_box}>
-        <Flex className={styles.flex_box} position="relative" top={2} left={110}>
+        <Flex position="relative" top={2} left={110}>
         {/* <div className={styles.flex_box}> */}
           <Stack spacing={3}>
             <Select
