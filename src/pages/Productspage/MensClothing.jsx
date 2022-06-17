@@ -13,14 +13,14 @@ import { useEffect } from "react";
 import { showProducts, sort } from "../../store/ProductsStore/products.action";
 import { useDispatch, useSelector } from "react-redux";
 
-const Shoes = () => {
+const MensClothing = () => {
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((state) => state.products);
 
   useEffect(() => {
     // console.log("useEffect");
 
-    showProducts(dispatch,"Shoes");
+    showProducts(dispatch,"Men");
   }, [dispatch]);
 
   const handleOnSelect = (e) => {
@@ -30,7 +30,8 @@ const Shoes = () => {
     // let keys = Object.keys(data[1]);
     // console.log('keys',keys)
 
-    sort(dispatch, value, data);
+      sort(dispatch, value,data);
+    
   };
 
   if (loading)
@@ -59,14 +60,14 @@ const Shoes = () => {
         <div className="breadcrum">
           <Breadcrumb separator=">" fontSize={14}>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/" fontSize={14}>
+              <BreadcrumbLink href="http://localhost:3001/" fontSize={14}>
                 Home
               </BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem>
               <BreadcrumbLink
-                href="/menpage"
+                href="http://localhost:3001/menpage"
                 fontSize="14px"
               >
                 Men
@@ -81,7 +82,7 @@ const Shoes = () => {
 
             <BreadcrumbItem isCurrentPage>
               <BreadcrumbLink href="#" fontSize={14} color="grey">
-                New In: shoes
+                New In: mens clothing
               </BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
@@ -89,10 +90,10 @@ const Shoes = () => {
       </div>
       <div style={{ border: "1px solid grey", width: "100%", height: "220px" }}>
         <div className="headline">
-          <h1>Men's New in: Shoes</h1>
+          <h1>Men's New in: Mens</h1>
           <p>
             If you needed another excuse to build on your footwear collection,
-            our edit of men's new shoes is a pretty good one. We've rounded up
+            our edit of men's new clothes is a pretty good one. We've rounded up
             new men's trainers, shoes and men's new boots from some of your
             favourite brands (think Nike, adidas Originals, Dr. Martens and ASOS
             DESIGN) to bring you the latest shoe styles all in one place. Jack &
@@ -157,7 +158,7 @@ const Shoes = () => {
         </Flex>
       </div>
       <div>
-        <p>{data.length} styles found</p>
+        <p>No of items</p>
       </div>
 
       <div className="products">
@@ -168,7 +169,7 @@ const Shoes = () => {
               <h2> {el.Brand_Name}</h2>
             </div>
             <div id="price_div">
-              <h3>{`£ ${+el.Price}`}</h3>
+              <h3>{`Rs: ${+(el.Price)}`}</h3>
             </div>
           </div>
         ))}
@@ -177,4 +178,4 @@ const Shoes = () => {
   );
 };
 
-export default Shoes;
+export default MensClothing;

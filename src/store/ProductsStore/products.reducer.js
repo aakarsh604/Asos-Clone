@@ -9,6 +9,7 @@ let initialState = {
   loading: false,
   error: false,
   data: [],
+  // sortedData:[]
 };
 
 export const productsReducer = (state = initialState, { type, payload }) => {
