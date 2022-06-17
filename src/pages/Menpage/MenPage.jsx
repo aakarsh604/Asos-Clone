@@ -10,8 +10,6 @@ import pic1 from "../../assets/img1.png"
 import pic2 from "../../assets/img2.png"
 import Footer from '../../components/footer/Footer';
 
-//console.log(menSale)
-
 const MenPage = () => {
   return (
     <div>

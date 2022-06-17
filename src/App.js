@@ -6,8 +6,11 @@ import Login from './pages/Login';
 import MenPage from "./pages/Menpage/MenPage"
 import {Routes,Route} from "react-router-dom"
 import ProductDetails from './pages/productDetails/ProductDetails';
-import Products from './pages/productDetails/Products';
 import Cart from './pages/cartPage/Cart';
+import Shoes from './pages/Productspage/Shoes';
+import MensClothing from './pages/Productspage/MensClothing'
+import WomensClothing from './pages/Productspage/WomensClothing'
+
 function App() {
   return (
     <div className="App">
@@ -16,9 +19,11 @@ function App() {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path="/menpage" element={ <MenPage/> } />
-          <Route path='/products' element={ <Products/>}/>
-        <Route path='/productdetails/:id' element={<ProductDetails/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+          <Route path='/productdetails/:id' element={<ProductDetails/>}/>
+          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/products/shoes' element={<Shoes/>}></Route>
+          <Route path='/products/mensclothing' element={<MensClothing/>}></Route>
+          <Route path='/products/womensclothing' element={<WomensClothing/>}></Route>
         </Routes>
     </div>
   );
