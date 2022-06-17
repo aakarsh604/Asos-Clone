@@ -152,7 +152,7 @@ export default class MultipleItems extends Component {
       prevArrow : <ChevronLeftIcon backgroundColor={"white"} color="black" ml="-30px" _hover={{color : "black"}} viewBox="4 6 20 13"/>,
     };
     return (
-      <div className="sliderdiv" >
+      <div className="sauravsliderdiv" >
         <Slider {...settings} style={{width: "80%", margin : "auto"}}  >
             {data.map(item=>(
                 <LikeProducts key={item.id} item={item}/>

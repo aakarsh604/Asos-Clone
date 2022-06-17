@@ -37,11 +37,11 @@ const ProductDetails = () => {
   const location = useLocation();
 
   let prevLocation;
-  if (location.state.pathname === "/products") {
+  if (location.state.pathname === "/products/mensclothing") {
     prevLocation = "MEN";
-  } else if (location.state.pathname === "/womenpage") {
+  } else if (location.state.pathname === "/products/womensclothing") {
     prevLocation = "WOMEN";
-  } else if(location.state.pathname==='/shoes'){
+  } else if(location.state.pathname==='/products/shoes'){
     prevLocation = "SHOES"
   }
   else {

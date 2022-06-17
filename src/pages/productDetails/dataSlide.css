@@ -6,12 +6,12 @@
 }
 
 
-.sliderdiv{
+.sauravsliderdiv{
     height: 280px;
     margin-top: 30px;
 }
 
-.cardname {
+.sauravcardname {
     height : 40px;
     display: flex;
     justify-content : center;
@@ -24,14 +24,14 @@
     line-height: 15px;
 }
 
-.cardprice{
+.sauravcardprice{
     color: black;
     font-size: 15px;
     font-weight: bold;
     color: grey;
     text-align: left;
 }
-.cardname1{
+.sauravcardname1{
     color: black;
     font-size: 12px;
     text-align: left;
