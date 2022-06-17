@@ -2,9 +2,8 @@
 .slick-arrow.slick-next {
    height: 70px;
    width: 50px;
-  
+   /* background-color:white; */
 }
-
 
 
 .sliderdiv{
@@ -23,4 +22,18 @@
     font-size: 13px;
     padding: 0px 30px;
     line-height: 15px;
+}
+
+.cardprice{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+    text-align: left;
+}
+.cardname1{
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 5px;
 }

@@ -12,11 +12,15 @@ import "../Productspage/Products.css";
 import { useEffect } from "react";
 import { showProducts, sort } from "../../store/ProductsStore/products.action";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 
 const Shoes = () => {
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((state) => state.products);
-
+  const location = useLocation();
+  const from ={
+     pathname: location.pathname
+  }
   useEffect(() => {
     // console.log("useEffect");
 
@@ -163,14 +167,16 @@ const Shoes = () => {
       <div className="products">
         {data.map((el) => (
           <div id="items" key={el.id}>
-            <img src={el.Image} alt="" />
-            <div id="name_div">
-              <h2> {el.Brand_Name}</h2>
-            </div>
-            <div id="price_div">
-              <h3>{`£ ${+el.Price}`}</h3>
-            </div>
+          <Link to={`/productdetails/${el.id}`} state={from}>
+          <img src={el.Image} alt="" />
+          <div id="name_div">
+            <h2> {el.Brand_Name}</h2>
           </div>
+          <div id="price_div">
+            <h3>{`£ ${+(el.Price)}`}</h3>
+          </div>
+          </Link>
+        </div>
         ))}
       </div>
     </div>

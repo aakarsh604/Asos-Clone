@@ -1,0 +1,275 @@
+
+.offerDiv{
+    display:flex;
+    background-color:#ff385c;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+.women,.men{
+    border: 1px solid black;
+    padding: 7px 15px;
+    font-weight: bold;
+    font-size: small;
+}
+.men{
+    padding: 7px 25px;
+}
+.sale{
+   
+    width: 50%;
+    font-weight: bolder;
+    font-size: small;
+    letter-spacing: 1px;
+    padding: 5px;
+    cursor:default;
+}
+
+.men:hover{
+    color: rgb(80, 71, 71);
+}
+.women:hover{
+    color: rgb(80, 71, 71);
+}
+.bigDiv{
+    background-color: #eeeeee;
+}
+.mainDiv{
+    display: flex;
+    margin-left:290px;
+    margin-top: 10px;
+    width: 61%;
+}
+.leftDivOne{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 25px;
+    background-color: white;
+    width: 80%;
+}
+.bag{
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+.reserved{
+    font-size: smaller;
+}
+.leftDivTwo{
+    
+    display: flex;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 80%;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+.imgPrd{
+    width: 135px;
+    height: 145px;
+}
+.itemDiv{
+    display: flex;
+   
+    padding-left: 15px;
+}
+.itemDetails{
+    text-align: left;
+    padding-right: 20px;
+    box-sizing: border-box;
+    
+}
+.colorSize{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.price{
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-top: -5px;
+}
+.name{
+    font-size: medium;
+    font-weight: 350;
+    margin-top: 5px;
+
+}
+.later{
+    border: 1px solid rgb(228, 217, 217);
+    width: 110px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+    font-size: small;
+}
+.leftDivThree{
+   
+    width: 80%;
+    display: flex;
+   flex-direction: row-reverse;
+   padding: 30px;
+   margin-top: 10px;
+   background-color: white;
+   
+}
+.subPrice{
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.subT{
+    margin-right: 30px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.delivery{
+   margin-top: 10px;
+    width: 80%;
+    background-color: white;
+    display: flex;
+    padding: 15px;
+    box-sizing: border-box;
+  
+}
+.iconD{
+    width:30px;
+    height: 30px;
+   margin-left: 15px;
+}
+.insideDelivery{
+    text-align: left;
+    margin-left:40px;
+    line-height: 30px;
+}
+.free{
+    font-size: medium;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.country{
+    font-size: 14px;
+}
+.more{
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+}
+.rightDiv{
+    margin-left: -125px;
+    box-sizing: border-box;
+    padding: 25px;
+    width: 350px;
+    background-color: white;
+    height: 400px;
+    position: sticky;
+    top: 0px;
+}
+.total{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 1px ;
+}
+.subTotal{
+    display: flex;
+    border-top: 1px solid rgb(228, 217, 217);
+    justify-content: space-between;
+    margin-top: 27px;
+    padding-top: 12px;
+    
+}
+.sub_total{
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.sub_price{
+    font-weight: 350;
+    letter-spacing: 1px;
+}
+.dCharge{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+   
+}
+.pCharge{
+    border: 1px solid rgb(228, 217, 217);
+    width: 19px;
+    height: 22px;
+    border-radius: 100px;
+    font-weight: bolder;
+}
+.btnCheckout{
+    background-color: #018849;
+    color: white;
+    width: 280px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin-top: 60px;
+}
+.btnCheckout:hover{
+    background-color: #015830;
+    
+}
+.accept{
+    margin-top: 15px;
+}
+.weAc{
+    text-align: left;
+    font-size: medium;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.card{
+    margin-top: 10px;
+}
+.cardImg{
+    width: 190px;
+}
+.step{
+    font-size: small;
+    margin-top: 10px;
+    margin-left: -20px;
+}
+.leftDivTwoUper{
+    margin-top: 10px;
+}
+.cancelUpdate{
+    border-top: 1px solid rgb(228, 217, 217) ;
+    border-bottom:1px solid rgb(228, 217, 217) ;
+    width: 80%;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.cancel{
+   margin-right: 30px;
+   text-decoration: underline;
+   font-weight: 400
+}
+.update{
+    border: 1px solid black;
+   height: 30px;
+   width: 80px;
+   background-color: black;
+   color: white;
+   font-size: 12px;
+   letter-spacing: 1px;
+}
+.selectSize,.selectQuantity{
+    outline: none;
+    font-size: smaller;
+}
+.selectSize{
+    border-left: 1px solid  rgb(228, 217, 217);
+    border-right: 1px solid  rgb(228, 217, 217); ;
+    width: 60px;
+    padding: 0 2px;
+}

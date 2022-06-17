@@ -7,7 +7,7 @@ const NavbarTop = () => {
     return (
         <Navbar expand="lg" bg="black" variant="dark" color="white" p="20px">
             <Container fluid>
-                <Navbar.Brand href="#" className="brand_name">asos</Navbar.Brand>
+                <Navbar.Brand href="/" className="brand_name">asos</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -15,14 +15,14 @@ const NavbarTop = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">MEN</Nav.Link>
+                        <Nav.Link href="/products">MEN</Nav.Link>
                         <Nav.Link href="#action2">WOMEN</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                   <Searchbar/>
                 <Nav.Link href="/login"><FaRegUser/></Nav.Link>
                 <Nav.Link href="#action2"><FaHeart /></Nav.Link>
-                <Nav.Link href="#action2"><FaShoppingBag /></Nav.Link>
+                <Nav.Link href="/cart"><FaShoppingBag /></Nav.Link>
             </Container>
         </Navbar>
     )
