@@ -37,11 +37,11 @@ const ProductDetails = () => {
   const location = useLocation();
 
   let prevLocation;
-  if (location.state.pathname === "/products") {
+  if (location.state.pathname === "/products/mensclothing") {
     prevLocation = "MEN";
-  } else if (location.state.pathname === "/womenpage") {
+  } else if (location.state.pathname === "/products/womensclothing") {
     prevLocation = "WOMEN";
-  } else if(location.state.pathname==='/shoes'){
+  } else if(location.state.pathname==='/products/shoes'){
     prevLocation = "SHOES"
   }
   else {
@@ -79,6 +79,7 @@ const ProductDetails = () => {
         status: "success",
         position: "top",
         isClosable: true,
+        color:"white"
       });
     }
   };
@@ -107,25 +108,8 @@ const ProductDetails = () => {
   }
   return (
     <div>
-      <div className={styles.offerDiv}>
-        <div>
-          {/* women page link */}
-          <Link to={"/menpage"}>
-            <h3 className={styles.women}>WOMEN</h3>
-          </Link>
-        </div>
-        <div className={styles.sale}>
-          <h3>SALE: UP TO 70% OFF!</h3>
-          <h3>IT'S CALLED BIG DISCOUNT ENERGY</h3>
-        </div>
-        <div>
-          <Link to={"/menpage"}>
-            <h3 className={styles.men}>MEN</h3>
-          </Link>
-        </div>
-      </div>
       <div className={styles.breadCrumbDiv}>
-        <Breadcrumb className={styles.breadCrumb}
+        <Breadcrumb className={styles.breadCrumb1}
           spacing="8px"
           separator={<ChevronRightIcon color='gray.500' />}
         >
@@ -157,10 +141,10 @@ const ProductDetails = () => {
         </div>
         <div className={styles.detailsDiv}>
           <div className={styles.brand}>
-            <p>{productDetails.Brand_Name}</p>
+            <p className={styles.brandname}>{productDetails.Brand_Name}</p>
           </div>
-          <div className={styles.price}>
-            <h4>{`£${productDetails.Price}`}</h4>
+          <div className={styles.price1}>
+            <h3 className={styles.price2}>{`£${productDetails.Price}`}</h3>
           </div>
           <div className={styles.color}>
             <span className={styles.cspan}>COLOUR: </span>{" "}
@@ -233,11 +217,11 @@ const ProductDetails = () => {
               </p>
               <div className={styles.ul}>
                 <UnorderedList>
-                  <ListItem>Next stop: checkout</ListItem>
-                  <ListItem>Wolverine design</ListItem>
-                  <ListItem>Crew neck</ListItem>
-                  <ListItem>Short sleeves</ListItem>
-                  <ListItem>Oversized fit</ListItem>
+                  <ListItem className={styles.li}>Next stop: checkout</ListItem>
+                  <ListItem className={styles.li}>Wolverine design</ListItem>
+                  <ListItem className={styles.li}>Crew neck</ListItem>
+                  <ListItem className={styles.li}>Short sleeves</ListItem>
+                  <ListItem className={styles.li}>Oversized fit</ListItem>
                 </UnorderedList>
               </div>
             </div>

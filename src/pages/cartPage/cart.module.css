@@ -1,44 +1,14 @@
 
-.offerDiv{
-    display:flex;
-    background-color:#ff385c;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px;
-}
-.women,.men{
-    border: 1px solid black;
-    padding: 7px 15px;
-    font-weight: bold;
-    font-size: small;
-}
-.men{
-    padding: 7px 25px;
-}
-.sale{
-   
-    width: 50%;
-    font-weight: bolder;
-    font-size: small;
-    letter-spacing: 1px;
-    padding: 5px;
-    cursor:default;
-}
-
-.men:hover{
-    color: rgb(80, 71, 71);
-}
-.women:hover{
-    color: rgb(80, 71, 71);
-}
 .bigDiv{
     background-color: #eeeeee;
+    padding-bottom: 20px;
 }
-.mainDiv{
+.mainDiv1{
     display: flex;
     margin-left:290px;
     margin-top: 10px;
     width: 61%;
+   
 }
 .leftDivOne{
     display: flex;
@@ -65,7 +35,6 @@
     padding: 20px;
     width: 80%;
     padding-bottom: 30px;
-    cursor: pointer;
 }
 .imgPrd{
     width: 135px;
@@ -80,7 +49,6 @@
     text-align: left;
     padding-right: 20px;
     box-sizing: border-box;
-    
 }
 .colorSize{
     display: flex;
@@ -88,15 +56,17 @@
     justify-content: space-between;
     margin-top: 5px;
 }
-.price{
+.price1{
     font-weight: bolder;
     letter-spacing: 1px;
     margin-top: -5px;
+    text-align: left;
 }
-.name{
+.name1{
     font-size: medium;
     font-weight: 350;
     margin-top: 5px;
+    text-align: left;
 
 }
 .later{
@@ -147,19 +117,21 @@
 }
 .free{
     font-size: medium;
+    text-align: left;
     font-weight: bolder;
     letter-spacing: 1px;
 }
 .country{
     font-size: 14px;
 }
-.more{
+.more1{
     text-decoration: underline;
     font-size: 14px;
     cursor: pointer;
+    text-align: left;
 }
-.rightDiv{
-    margin-left: -125px;
+.rightDiv1{
+    margin-left: -110px;
     box-sizing: border-box;
     padding: 25px;
     width: 350px;
@@ -235,7 +207,8 @@
 .step{
     font-size: small;
     margin-top: 10px;
-    margin-left: -20px;
+    margin-left: -45px;
+    
 }
 .leftDivTwoUper{
     margin-top: 10px;
@@ -272,4 +245,8 @@
     border-right: 1px solid  rgb(228, 217, 217); ;
     width: 60px;
     padding: 0 2px;
+}
+.leftDiv{
+    width: 68%;
+    height: auto;
 }

@@ -41,27 +41,40 @@
     font-size: 22px;
     font-weight: 300;
     line-height: 28px;
+    text-align: center;
+   
 }
-.price{
+.brandname{
+    text-align:left;
+}
+.price1{
+   
     font-size: larger;
     font-weight: bold ;
     letter-spacing: 1.5px;
     margin-top: 10px;
+   
+    
+}
+.price2{
+    text-align: left;
 }
 .color{
-    
+    text-align: left;
     margin-top: 30px;
 }
 .cspan{
     font-weight: bold;
     font-size: 12px;
     letter-spacing:1.5px ;
+    
 }
 .sizeDiv{
     
     margin-top: 25px;
 }
 .sizeH{
+    text-align: left;
     font-weight: bold;
     font-size: 12px;
     letter-spacing:1.5px ;
@@ -72,12 +85,18 @@
     width: 270px;
     padding: 5px;
     margin-top: 10px;
+    text-align:left;
+     margin-left: -40px;
+}
+.select>option{
+    text-align: left;
 }
 .select:focus{
     -webkit-appearance: none;
     -moz-box-shadow:none;
     border: 1px solid rgb(122, 199, 243); 
-    box-shadow: 2px 2px 2px rgb(122, 199, 243)
+    box-shadow: 2px 2px 2px rgb(122, 199, 243);
+    text-align: left;
 }
 .btnDiv {
    
@@ -118,6 +137,7 @@
     margin-left: 32px;
     margin-top: 15px;
     font-size: small;
+    text-align: left;
 }
 .lSpan{
     text-decoration: underline;
@@ -152,6 +172,9 @@
 .ul{
     text-align: left;
    margin-left: 10px;
+}
+.li{
+    text-align: left;
 }
 .h2{
     color: grey;
@@ -194,6 +217,7 @@
 }
 .insidebtn{
     margin-left:50px;
+    color: white;
 }
 .chooseSize{
     width:270px;
@@ -202,45 +226,13 @@
     padding: 8px;
     background-color: #fae7ec;
 }
-.offerDiv{
-    display:flex;
-    background-color:#ff385c;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px;
-}
-.women,.men{
-    border: 1px solid black;
-    padding: 7px 15px;
-    font-weight: bold;
-    font-size: small;
-}
-.men{
-    padding: 7px 25px;
-}
-.sale{
-   
-    width: 50%;
-    font-weight: bolder;
-    font-size: small;
-    letter-spacing: 1px;
-    padding: 5px;
-    cursor:default;
-}
-
-.men:hover{
-    color: rgb(80, 71, 71);
-}
-.women:hover{
-    color: rgb(80, 71, 71);
-}
 .bigDiv{
     background-color: #eeeeee;
 }
 .bigImg {
     transform-origin: 65% 75%;  transition: transform 1s, filter .5s ease-out;
     cursor: zoom-in;
-  }
+}
   
 .bigImg:active {
     -webkit-transform: scale(2);
@@ -248,22 +240,22 @@
     cursor: zoom-out;
   }
   .breadCrumbDiv{
-   
     padding: 10px;
     padding-top: 15px;
     font-size: small;
     
   }
-  .breadCrumb{
-    margin-left: -57.5%;
+  .breadCrumb1{
+    margin-left: -55%;
   }
   .like{
    
     width: 65%;
     margin: auto;
-    height: 300px;
+    height: 450px;
     margin-top: 40px;
     border-top: 1px solid rgb(211, 208, 208);
+   
   }
   .h1Like{
     text-align: left;
@@ -272,3 +264,4 @@
     font-size: large;
     margin-top: 25px;
   }
+  

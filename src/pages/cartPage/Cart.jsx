@@ -44,24 +44,7 @@ let  total1 = cartData.reduce((acu,el)=>(Number(acu)+(Number(el.price) * Number(
   else {
     return (
       <div className={styles.bigDiv}>
-        <div className={styles.offerDiv}>
-          <div>
-            {/* women page link */}
-            <Link to={"/menpage"}>
-              <h3 className={styles.women}>WOMEN</h3>
-            </Link>
-          </div>
-          <div className={styles.sale}>
-            <h3>SALE: UP TO 70% OFF!</h3>
-            <h3>IT'S CALLED BIG DISCOUNT ENERGY</h3>
-          </div>
-          <div >
-            <Link to={"/menpage"}>
-              <h3  className={styles.men} >MEN</h3>
-            </Link>
-          </div>
-        </div>
-        <div className={styles.mainDiv}>
+        <div className={styles.mainDiv1}>
           <div className={styles.leftDiv}>
             <div className={styles.leftDivOne}>
               <h1 className={styles.bag}>MY BAG</h1>
@@ -85,11 +68,11 @@ let  total1 = cartData.reduce((acu,el)=>(Number(acu)+(Number(el.price) * Number(
               <div className={styles.insideDelivery}>
                 <h1 className={styles.free}>FREE* STANDARD DELIVERY</h1>
                 <p className={styles.country}>Fast delivery options available to most countries.</p>
-                <p className={styles.more}>More info</p>
+                <p className={styles.more1}>More info</p>
               </div>
             </div>
           </div>
-          <div className={styles.rightDiv}>
+          <div className={styles.rightDiv1}>
             <h1 className={styles.total}>TOTAL</h1>
             <div className={styles.subTotal}>
               
@@ -101,9 +84,8 @@ let  total1 = cartData.reduce((acu,el)=>(Number(acu)+(Number(el.price) * Number(
               <h2 className={styles.sub_total}>Delivery</h2>
               <p className={styles.pCharge}>!</p>
             </div>
-            {/* 
-            checkout Page */}
-            <Link to={"/"}><button className={styles.btnCheckout} >CHECKOUT</button></Link> 
+            
+            <Link to={"/checkoutpage"}><button className={styles.btnCheckout} >CHECKOUT</button></Link> 
             <div className={styles.accept}>
               <h2 className={styles.weAc}>WE ACCEPT: </h2>
               <div className={styles.card}>
