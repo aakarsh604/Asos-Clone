@@ -12,6 +12,7 @@ import WomensClothing from './pages/Productspage/WomensClothing'
 import Footer from './components/footer/Footer';
 import WomenPage from './pages/Womenpage/WomenPage';
 import Homepage from './pages/Home/Homepage';
+import Checkout from './pages/Checkoutpage/Checkout';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/products/shoes' element={<Shoes/>}></Route>
           <Route path='/products/mensclothing' element={<MensClothing/>}></Route>
           <Route path='/products/womensclothing' element={<WomensClothing/>}></Route>
+          <Route path='/checkoutpage' element={<Checkout/>}/>
         </Routes>
         <Footer/>
     </div>

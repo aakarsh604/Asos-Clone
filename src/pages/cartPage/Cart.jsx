@@ -68,7 +68,7 @@ let  total1 = cartData.reduce((acu,el)=>(Number(acu)+(Number(el.price) * Number(
               <div className={styles.insideDelivery}>
                 <h1 className={styles.free}>FREE* STANDARD DELIVERY</h1>
                 <p className={styles.country}>Fast delivery options available to most countries.</p>
-                <p className={styles.more}>More info</p>
+                <p className={styles.more1}>More info</p>
               </div>
             </div>
           </div>
@@ -84,9 +84,8 @@ let  total1 = cartData.reduce((acu,el)=>(Number(acu)+(Number(el.price) * Number(
               <h2 className={styles.sub_total}>Delivery</h2>
               <p className={styles.pCharge}>!</p>
             </div>
-            {/* 
-            checkout Page */}
-            <Link to={"/"}><button className={styles.btnCheckout} >CHECKOUT</button></Link> 
+            
+            <Link to={"/checkoutpage"}><button className={styles.btnCheckout} >CHECKOUT</button></Link> 
             <div className={styles.accept}>
               <h2 className={styles.weAc}>WE ACCEPT: </h2>
               <div className={styles.card}>

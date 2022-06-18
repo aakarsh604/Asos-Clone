@@ -2,25 +2,34 @@ import { CloseButton } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 import { getItemApi, removeCartApi, updateCartApi } from "../../store/cart/cart.actions";
 import styles from "./cart.module.css";
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
   const [flag, setFlag] = useState(false);
   const sizeRef = useRef(item.size);
+  const location = useLocation()
   const quantityRef = useRef(item.quantity);
   let handleUpdate = () => {
      dispatch(updateCartApi(item.id,quantityRef.current,sizeRef.current,))
      setFlag(!flag)
   };
+  let from = {
+    pathname:location.pathname
+  }
   return (
     <>
-      <div key={item.id} className={styles.leftDivTwo}>
+      
+       
+        <div key={item.id} className={styles.leftDivTwo}>
         <img className={styles.imgPrd} src={item.Image} alt="cart" />
+       
         <div className={styles.itemDiv}>
+        <Link to={`/productdetails/${item.id}`} state={from}>
           <div className={styles.itemDetails}>
-            <p className={styles.price}>{`£${item.price}`}</p>
-            <p className={styles.name}>{item.productName}</p>
+            <p className={styles.price1}>{`£${item.price}`}</p>
+            <p className={styles.name1}>{item.productName}</p>
             <div className={styles.colorSize}>
               {" "}
               <span>{item.color}</span>
@@ -62,7 +71,7 @@ const CartItem = ({ item }) => {
 
             <p className={styles.later}>Save for later</p>
           </div>
-
+          </Link>
           <div>
             {" "}
             <CloseButton
@@ -73,7 +82,9 @@ const CartItem = ({ item }) => {
             />
           </div>
         </div>
-      </div>
+        </div>
+       
+     
       <div>
           {flag && (
             <div className={styles.cancelUpdate}>

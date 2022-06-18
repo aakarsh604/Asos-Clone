@@ -1,11 +1,11 @@
-/* .breadcrum {
-  /* border: 1px solid red; */
+ /* .breadcrum {
 
-  /* position: absolute;
+
+  position: absolute;
   top: 154px;
   left: 130px;
-} */
-/* .headline > h1 {
+} 
+ .headline > h1 {
  
   width: fit-content;
   margin: auto;
@@ -52,8 +52,6 @@
 
   height: 510px;
   width: 100%;
-
-  
 }
 #items img {
   height: 410px;
@@ -83,4 +81,4 @@
 }
 .error {
   font-size: x-large;
-} */ 
+}  */

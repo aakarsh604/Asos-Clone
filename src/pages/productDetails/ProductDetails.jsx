@@ -79,6 +79,7 @@ const ProductDetails = () => {
         status: "success",
         position: "top",
         isClosable: true,
+        color:"white"
       });
     }
   };
@@ -108,7 +109,7 @@ const ProductDetails = () => {
   return (
     <div>
       <div className={styles.breadCrumbDiv}>
-        <Breadcrumb className={styles.breadCrumb}
+        <Breadcrumb className={styles.breadCrumb1}
           spacing="8px"
           separator={<ChevronRightIcon color='gray.500' />}
         >
@@ -140,10 +141,10 @@ const ProductDetails = () => {
         </div>
         <div className={styles.detailsDiv}>
           <div className={styles.brand}>
-            <p>{productDetails.Brand_Name}</p>
+            <p className={styles.brandname}>{productDetails.Brand_Name}</p>
           </div>
-          <div className={styles.price}>
-            <h4>{`£${productDetails.Price}`}</h4>
+          <div className={styles.price1}>
+            <h3 className={styles.price2}>{`£${productDetails.Price}`}</h3>
           </div>
           <div className={styles.color}>
             <span className={styles.cspan}>COLOUR: </span>{" "}
@@ -216,11 +217,11 @@ const ProductDetails = () => {
               </p>
               <div className={styles.ul}>
                 <UnorderedList>
-                  <ListItem>Next stop: checkout</ListItem>
-                  <ListItem>Wolverine design</ListItem>
-                  <ListItem>Crew neck</ListItem>
-                  <ListItem>Short sleeves</ListItem>
-                  <ListItem>Oversized fit</ListItem>
+                  <ListItem className={styles.li}>Next stop: checkout</ListItem>
+                  <ListItem className={styles.li}>Wolverine design</ListItem>
+                  <ListItem className={styles.li}>Crew neck</ListItem>
+                  <ListItem className={styles.li}>Short sleeves</ListItem>
+                  <ListItem className={styles.li}>Oversized fit</ListItem>
                 </UnorderedList>
               </div>
             </div>

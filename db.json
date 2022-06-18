@@ -679,15 +679,37 @@
       "color": "Pink"
     }
   ],
+  "country": [
+    {
+      "id": 1,
+      "name": "India",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+    },
+    {
+      "id": 2,
+      "name": "Canada",
+      "img": "https://cdn.britannica.com/68/7068-004-7848FEB4/Flag-Canada.jpg"
+    },
+    {
+      "id": 3,
+      "name": "USA",
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
+    },
+    {
+      "id": 4,
+      "name": "Pakistan",
+      "img": "https://cdn.britannica.com/46/3346-004-D3BDE016/flag-symbolism-Pakistan-design-Islamic.jpg"
+    }
+  ],
   "cartItem": [
     {
-      "productName": "River Island round toe derby shoes in brown",
-      "Image": "https://images.asos-media.com/products/vans-old-skool-trainers-in-orange/201666941-1-orange?$n_320w$&wid=317&fit=constrain",
-      "price": "37.40",
-      "size": "S",
-      "color": "orange",
-      "quantity": 3,
-      "id": 2
+      "productName": "Influence peter pan collar midi dress in bright pink",
+      "Image": "https://images.asos-media.com/products/influence-peter-pan-collar-midi-dress-in-bright-pink/201737178-1-brightpink?$n_320w$&wid=317&fit=constrain",
+      "price": "24.00",
+      "size": "L",
+      "color": "Bright Pink",
+      "quantity": 1,
+      "id": 33
     }
   ]
 }

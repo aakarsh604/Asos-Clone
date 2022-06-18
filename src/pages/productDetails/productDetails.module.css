@@ -41,27 +41,40 @@
     font-size: 22px;
     font-weight: 300;
     line-height: 28px;
+    text-align: center;
+   
 }
-.price{
+.brandname{
+    text-align:left;
+}
+.price1{
+   
     font-size: larger;
     font-weight: bold ;
     letter-spacing: 1.5px;
     margin-top: 10px;
+   
+    
+}
+.price2{
+    text-align: left;
 }
 .color{
-    
+    text-align: left;
     margin-top: 30px;
 }
 .cspan{
     font-weight: bold;
     font-size: 12px;
     letter-spacing:1.5px ;
+    
 }
 .sizeDiv{
     
     margin-top: 25px;
 }
 .sizeH{
+    text-align: left;
     font-weight: bold;
     font-size: 12px;
     letter-spacing:1.5px ;
@@ -72,12 +85,18 @@
     width: 270px;
     padding: 5px;
     margin-top: 10px;
+    text-align:left;
+     margin-left: -40px;
+}
+.select>option{
+    text-align: left;
 }
 .select:focus{
     -webkit-appearance: none;
     -moz-box-shadow:none;
     border: 1px solid rgb(122, 199, 243); 
-    box-shadow: 2px 2px 2px rgb(122, 199, 243)
+    box-shadow: 2px 2px 2px rgb(122, 199, 243);
+    text-align: left;
 }
 .btnDiv {
    
@@ -118,6 +137,7 @@
     margin-left: 32px;
     margin-top: 15px;
     font-size: small;
+    text-align: left;
 }
 .lSpan{
     text-decoration: underline;
@@ -152,6 +172,9 @@
 .ul{
     text-align: left;
    margin-left: 10px;
+}
+.li{
+    text-align: left;
 }
 .h2{
     color: grey;
@@ -194,6 +217,7 @@
 }
 .insidebtn{
     margin-left:50px;
+    color: white;
 }
 .chooseSize{
     width:270px;
@@ -216,14 +240,13 @@
     cursor: zoom-out;
   }
   .breadCrumbDiv{
-   
     padding: 10px;
     padding-top: 15px;
     font-size: small;
     
   }
-  .breadCrumb{
-    margin-left: -57.5%;
+  .breadCrumb1{
+    margin-left: -55%;
   }
   .like{
    
@@ -241,3 +264,4 @@
     font-size: large;
     margin-top: 25px;
   }
+  
