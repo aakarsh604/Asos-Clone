@@ -6,13 +6,14 @@ import styles from './login.module.css'
 import './login.css'
 import { signup } from '../../store/auth/auth.actions'
 const SignupForm = () => {
-    const [email,setEmail]=useState("rovin7678@gmail.com");
-    const [password,setPassword]=useState("12345678");
+    const [email,setEmail]=useState("");
+    const [name,SetName]=useState("");
+    const [password,setPassword]=useState("");
     const navigate=useNavigate();
     const dispatch=useDispatch();
     const handleFormEvent=(e)=>{
         e.preventDefault();
-        let payload = {email, password}
+        let payload = {name,email, password}
         dispatch(signup(payload));
         navigate("/login")
     }
@@ -21,7 +22,7 @@ const SignupForm = () => {
       <label>EMAIL ADDRESS:</label>
       <input type="text" className={styles.input} value={email}  onChange={(e)=>setEmail(e.target.value)} />
       <label>FIRST NAME:</label>
-      <input type="text" className={styles.input} value={"Rovin"}/>
+      <input type="text" className={styles.input} value={name}  onChange={(e)=>SetName(e.target.value)} />
       <label>LAST NAME:</label>
       <input type="text" className={styles.input} value={"Singh"}/>
       <label>PASSWORD:</label>

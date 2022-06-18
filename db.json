@@ -752,7 +752,13 @@
     {
       "id": 1,
       "name": "rovin",
-      "email": "rovin7678",
+      "email": "rovin7678@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "name": "deepanshu",
+      "email": "deepanshuchugh24@gmail.com",
       "password": "12345678"
     },
     {
@@ -764,6 +770,18 @@
       "email": "aakarsh604@gmail.com",
       "password": "12345",
       "id": 6
+    },
+    {
+      "email": "akash@gmail.com",
+      "password": "12345678",
+      "name": "akash",
+      "id": 7
+    },
+    {
+      "email": "Saurabh@gmail.com",
+      "password": "1234678",
+      "name": "Saurabh",
+      "id": 8
     }
   ]
 }
