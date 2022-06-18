@@ -1,10 +1,6 @@
 import React from "react"
 import { Navbar, Nav, NavDropdown, Container,Row,Col } from "react-bootstrap"
-<<<<<<< HEAD
-import {Link} from "react-router-dom"
-=======
 import { Link } from "react-router-dom"
->>>>>>> master
 import "./Navbar.css"
 const NavbarDown = () => {
     return (
@@ -54,11 +50,7 @@ const NavbarDown = () => {
                             </NavDropdown>
                             <NavDropdown title="Shoes" id="navbarScrollingDropdown" renderMenuOnMount={true}>
                                 <NavDropdown.Item as={Link} to="/products/shoes">Shoes</NavDropdown.Item>
-<<<<<<< HEAD
-                                <NavDropdown.Item as={Link} to="/products/shoes">Flip Flop</NavDropdown.Item>
-=======
                                 <NavDropdown.Item href="#action4">Flip flops</NavDropdown.Item>
->>>>>>> master
                             </NavDropdown>
                             <NavDropdown title="Sportwear" id="navbarScrollingDropdown" renderMenuOnMount={true}>
                                 <NavDropdown.Item href="#action3">Joggers</NavDropdown.Item>
