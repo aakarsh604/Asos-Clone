@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './login.module.css'
 import './login.css'
 import LoginForm from './Loginform'
+import SignupForm from './SignupForm'
 const Login = () => {
         return (
             <div className={styles.box} >
@@ -30,33 +31,9 @@ const Login = () => {
                                 <br></br>
                                 <br></br>
                                 <div className={styles.formOuter}>
-                                    <form className={styles.form}>
-                                        <label>EMAIL ADDRESS:</label>
-                                        <input type="text" className={styles.input} />
-                                        <label>FIRST NAME:</label>
-                                        <input type="text" className={styles.input} />
-                                        <label>LAST NAME:</label>
-                                        <input type="text" className={styles.input} />
-                                        <label>PASSWORD:</label>
-                                        <input type="text" className={styles.input} />
-                                        <label>DATE OF BIRTH:</label>
-                                        <input type="date" className={styles.inputDate} />
-                                        <br></br>
-                                        <label>MOSTLY INTERESTED IN</label>
-                                        <div className={styles.radioBtn}>
-                                            <RadioGroup defaultValue='2'>
-                                                <Stack spacing={100} direction='row'>
-                                                    <Radio colorScheme='black' size='lg' borderColor="gray" value='1'>
-                                                        Womenswear
-                                                    </Radio>
-                                                    <Radio colorScheme='black' size='lg' borderColor="gray" value='2'>
-                                                        Menswear
-                                                    </Radio>
-                                                </Stack>
-                                            </RadioGroup>
-                                        </div>
-                                        <button className={styles.signInBtn}>JOIN ASOS</button>
-                                    </form>
+
+                                        <SignupForm/>
+
                                     <p>Forgot Password ?</p>
                                 </div>
                                 <br></br>
@@ -65,7 +42,11 @@ const Login = () => {
                             </TabPanel>
                             <TabPanel>
                                 <div className={styles.formOuter}>
+
+
                                     <LoginForm />
+
+
                                     <p>Forgot Password ?</p>
                                 </div>
                                 <br></br>
