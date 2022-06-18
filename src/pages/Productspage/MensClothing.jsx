@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 
-import styles from './Shoes.module.css';
+import styles from "./Shoes.module.css";
 import { useEffect } from "react";
 import { showProducts, sort } from "../../store/ProductsStore/products.action";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,13 +18,13 @@ const MensClothing = () => {
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((state) => state.products);
   const location = useLocation();
-  const from ={
-     pathname: location.pathname
-  }
+  const from = {
+    pathname: location.pathname,
+  };
   useEffect(() => {
     // console.log("useEffect");
 
-    showProducts(dispatch,"Men");
+    showProducts(dispatch, "Men");
   }, [dispatch]);
 
   const handleOnSelect = (e) => {
@@ -34,7 +34,7 @@ const MensClothing = () => {
     // let keys = Object.keys(data[1]);
     // console.log('keys',keys)
 
-    sort(dispatch, value, data , "Men");
+    sort(dispatch, value, data, "Men");
   };
 
   if (loading)
@@ -52,14 +52,7 @@ const MensClothing = () => {
  
   return (
     <div>
-      <div
-        style={{
-          border: "1px solid grey",
-          width: "100%",
-          height: "60px",
-          marginTop: "0px",
-        }}
-      >
+      <div className={styles.breadcrum_div}>
         <div className={styles.breadcrum}>
           <Breadcrumb separator=">" fontSize={14}>
             <BreadcrumbItem>
@@ -69,10 +62,7 @@ const MensClothing = () => {
             </BreadcrumbItem>
 
             <BreadcrumbItem>
-              <BreadcrumbLink
-                href="/men"
-                fontSize="14px"
-              >
+              <BreadcrumbLink href="/men" fontSize="14px">
                 Men
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -91,9 +81,12 @@ const MensClothing = () => {
           </Breadcrumb>
         </div>
       </div>
-      <div className={styles.headline_box} style={{ border: "1px solid grey", width: "100%", height: "220px" }}>
+      <div
+        className={styles.headline_box}
+        style={{ border: "1px solid grey", width: "100%", height: "220px" }}
+      >
         <div className={styles.headline}>
-          <h1>Men's New in: Shoes</h1>
+          <h1>Men's New in: Men Clothes</h1>
           <p>
             If you needed another excuse to build on your footwear collection,
             our edit of men's new shoes is a pretty good one. We've rounded up
@@ -108,7 +101,7 @@ const MensClothing = () => {
       </div>
       <div className={styles.filter_box}>
         <Flex position="relative" top={2} left={110}>
-        {/* <div className={styles.flex_box}> */}
+          {/* <div className={styles.flex_box}> */}
           <Stack spacing={3}>
             <Select
               variant="filled"
@@ -169,16 +162,16 @@ const MensClothing = () => {
       <div className={styles.products}>
         {data.map((el) => (
           <div id={styles.items} key={el.id}>
-          <Link to={`/productdetails/${el.id}`} state={from}>
-          <img src={el.Image} alt="" />
-          <div id={styles.name_div}>
-            <h2> {el.Brand_Name}</h2>
+            <Link to={`/productdetails/${el.id}`} state={from}>
+              <img src={el.Image} alt="" />
+              <div id={styles.name_div}>
+                <h2> {el.Brand_Name}</h2>
+              </div>
+              <div id={styles.price_div}>
+                <h3>{`£ ${+el.Price}`}</h3>
+              </div>
+            </Link>
           </div>
-          <div id={styles.price_div}>
-            <h3>{`£ ${+(el.Price)}`}</h3>
-          </div>
-          </Link>
-        </div>
         ))}
       </div>
     </div>
