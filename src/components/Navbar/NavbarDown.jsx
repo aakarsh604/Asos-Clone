@@ -9,7 +9,7 @@ const NavbarDown = () => {
                     <Navbar.Collapse id="basic-navbar-nav" >
                         <Nav className="me-auto">
                             <NavDropdown title="Sale" id="navbarScrollingDropdown" className="active_class" renderMenuOnMount={true}>
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                                <NavDropdown.Item href="/shoes">Shoes</NavDropdown.Item>
                                 <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown title="New in" id="navbarScrollingDropdown" renderMenuOnMount={true}>
