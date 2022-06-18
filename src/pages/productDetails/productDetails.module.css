@@ -1,0 +1,267 @@
+.proDiv{
+    border:1px solid red;
+    width:20%;
+    margin: auto;
+}
+
+.uperDiv{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+}
+.imgDiv{
+    display: flex;
+   
+}
+
+.smallImg{
+    height: 70px;
+    width: 60px;
+    border: 3px solid rgb(146, 215, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.bigImg{
+  width:480px;
+  margin-left: 30px;
+
+}
+.icon{
+    width:20px;
+    height: 20px;
+    display: inline-block;
+}
+.detailsDiv{
+    text-align: left;
+    width: 350px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.brand{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: center;
+   
+}
+.brandname{
+    text-align:left;
+}
+.price1{
+   
+    font-size: larger;
+    font-weight: bold ;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+   
+    
+}
+.price2{
+    text-align: left;
+}
+.color{
+    text-align: left;
+    margin-top: 30px;
+}
+.cspan{
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing:1.5px ;
+    
+}
+.sizeDiv{
+    
+    margin-top: 25px;
+}
+.sizeH{
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing:1.5px ;
+}
+.select{
+    outline: none;
+    border: 1px solid black;
+    width: 270px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align:left;
+     margin-left: -40px;
+}
+.select>option{
+    text-align: left;
+}
+.select:focus{
+    -webkit-appearance: none;
+    -moz-box-shadow:none;
+    border: 1px solid rgb(122, 199, 243); 
+    box-shadow: 2px 2px 2px rgb(122, 199, 243);
+    text-align: left;
+}
+.btnDiv {
+   
+    margin-top: 20px;
+
+}
+.btnCart{
+     background-color: #018849;
+     color: white;
+     text-align: right;
+     width: 220px;
+     height: 40px;
+     font-weight: bold;
+     font-size: medium;
+     display: flex;
+     align-items: center;
+     padding-top: 2px;
+}
+.btnCart:hover{
+    background-color: #015830
+}
+.delivery{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 270px;
+    padding: 15px;
+    margin-top: 20px;
+}
+.iconDiv{
+    display: flex;
+    align-items: center;
+   
+    justify-content: space-between;
+    width: 110px;
+    font-size: small;
+   
+}
+.tc{
+    margin-left: 32px;
+    margin-top: 15px;
+    font-size: small;
+    text-align: left;
+}
+.lSpan{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.lowerDiv{
+    width: 60%;
+    margin: auto;
+  
+  
+    margin-top: 70px;
+}
+.innerlower{
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+    opacity: 1;
+}
+.innerLowerone{
+  
+   width: 40%;
+}
+.innerLowertwo{
+  
+    width: 43%;
+}
+.innerLowerthree{
+   
+    width: 42%;
+    margin-left: 10px;
+}
+.ul{
+    text-align: left;
+   margin-left: 10px;
+}
+.li{
+    text-align: left;
+}
+.h2{
+    color: grey;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+.p{
+    text-align: left;
+    margin-top: 20px;
+}
+.h3{
+    color: grey;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+}
+.p1{
+    text-align: left;
+}
+.p2{
+    text-align: left;
+    margin-top: 20px;
+}
+.uSpan{
+   text-decoration: underline;
+}
+.btn2{
+    width: 200px;
+    height: 20px;
+    border: 1px solid grey;
+    
+}
+.spin{
+ margin-left: 10px;
+
+}
+.insidebtn{
+    margin-left:50px;
+    color: white;
+}
+.chooseSize{
+    width:270px;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #fae7ec;
+}
+.bigDiv{
+    background-color: #eeeeee;
+}
+.bigImg {
+    transform-origin: 65% 75%;  transition: transform 1s, filter .5s ease-out;
+    cursor: zoom-in;
+}
+  
+.bigImg:active {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    cursor: zoom-out;
+  }
+  .breadCrumbDiv{
+    padding: 10px;
+    padding-top: 15px;
+    font-size: small;
+    
+  }
+  .breadCrumb1{
+    margin-left: -55%;
+  }
+  .like{
+   
+    width: 65%;
+    margin: auto;
+    height: 450px;
+    margin-top: 40px;
+    border-top: 1px solid rgb(211, 208, 208);
+   
+  }
+  .h1Like{
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: large;
+    margin-top: 25px;
+  }
+  

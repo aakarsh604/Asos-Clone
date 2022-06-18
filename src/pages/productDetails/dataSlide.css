@@ -1,0 +1,39 @@
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+   height: 70px;
+   width: 50px;
+}
+
+
+.sauravsliderdiv{
+    height: 280px;
+    margin-top: 30px;
+}
+
+.sauravcardname {
+    height : 40px;
+    display: flex;
+    justify-content : center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 0px 30px;
+    line-height: 15px;
+    
+}
+
+.sauravcardprice{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+    text-align: left;
+}
+.sauravcardname1{
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 5px;
+}
