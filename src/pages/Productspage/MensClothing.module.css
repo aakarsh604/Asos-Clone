@@ -71,9 +71,7 @@
   height: 410px;
   width: 100%;
 }
-#price_div {
-  /* border: 1px solid teal; */
-}
+
 #price_div > h3 {
   text-align: left;
   font-style: normal;

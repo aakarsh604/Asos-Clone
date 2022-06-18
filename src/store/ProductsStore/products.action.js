@@ -12,7 +12,6 @@ export const showProducts = (dispatch,value) => {
   return axios
     .get(`http://localhost:8080/${value}`)
     .then((r) => {
-      //   console.log(r.data, "manish");
       dispatch({ type: PRODUCTS_SUCESS, payload: r.data });
     })
     .catch(() => {
@@ -20,6 +19,10 @@ export const showProducts = (dispatch,value) => {
       dispatch({ type: PRODUCTS_ERROR });
     });
 };
+
+
+
+  
 
 export const sort = (dispatch, value, data , products) => {
   // console.log(value,price)

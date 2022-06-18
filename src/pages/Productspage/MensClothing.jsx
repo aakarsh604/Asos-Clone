@@ -49,7 +49,7 @@ const MensClothing = () => {
         <h1>SOMETHING WENT WRONG.......</h1>
       </div>
     );
-  console.log(data, "jsx");
+ 
   return (
     <div>
       <div className={styles.breadcrum_div}>

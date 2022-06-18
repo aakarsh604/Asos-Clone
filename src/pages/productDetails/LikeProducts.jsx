@@ -9,8 +9,8 @@ const LikeProducts = ({item}) => {
        <div key={item.id} style={{marginRight : "10px", marginLeft : "10px"}}>
        <Link to={`/productdetails/${item.id}`} state={from}>
          <img src={`${item.Image}`} />
-        <div className='cardname1'>{item.Brand_Name}</div>
-        <div className="cardprice">{`£ ${item.Price}`}</div>
+        <div className='sauravcardname1'>{item.Brand_Name}</div>
+        <div className="sauravcardprice">{`£ ${item.Price}`}</div>
        </Link>
         
         </div>
