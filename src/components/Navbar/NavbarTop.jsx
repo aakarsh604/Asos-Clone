@@ -35,17 +35,8 @@ const NavbarTop = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-<<<<<<< HEAD
-            <Nav.Link as={Link} to="/men">
-              MEN
-            </Nav.Link>
-            <Nav.Link as={Link} to="/women">
-              WOMEN
-            </Nav.Link>
-=======
             <Nav.Link as={Link} to="/men">MEN</Nav.Link>
             <Nav.Link as={Link} to="/women">WOMEN</Nav.Link>
->>>>>>> master
           </Nav>
         </Navbar.Collapse>
         <Searchbar />
