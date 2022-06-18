@@ -68,3 +68,8 @@ input[type="search"] {
 .expnadeclass{
     width: 980px;
 }
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: -10px !important;
+    margin-top: 0.125rem;
+}

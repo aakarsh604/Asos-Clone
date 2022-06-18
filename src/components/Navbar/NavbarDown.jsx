@@ -1,5 +1,6 @@
 import React from "react"
 import { Navbar, Nav, NavDropdown, Container,Row,Col } from "react-bootstrap"
+import {Link} from "react-router-dom"
 import "./Navbar.css"
 const NavbarDown = () => {
     return (
@@ -47,8 +48,8 @@ const NavbarDown = () => {
                                 <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown title="Shoes" id="navbarScrollingDropdown" renderMenuOnMount={true}>
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/products/shoes">Shoes</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/products/shoes">Flip Flop</NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown title="Sportwear" id="navbarScrollingDropdown" renderMenuOnMount={true}>
                                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
