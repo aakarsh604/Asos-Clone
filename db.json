@@ -33,12 +33,27 @@
       "id": 3
     }
   ],
-  "users":[
-       {
-        "id": 1,
-        "name":"rovin",
-        "email":"rovin7678",
-        "password":"12345678"
-       }
+  "users": [
+    {
+      "id": 1,
+      "name": "rovin",
+      "email": "rovin7678",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "name": "deepanshu",
+      "email": "deepa7678",
+      "password": "12345678"
+    },
+    {
+      "id": 3,
+      "name": "rovin",
+      "email": "roviner7678",
+      "password": "12345678"
+    },
+    {
+     
+    }
   ]
 }
