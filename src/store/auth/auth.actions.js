@@ -25,14 +25,15 @@ export const logoutReq = () => (dispatch)=>{
      dispatch({type:LOGOUT})
 }
 
-export const signup=({email,password})=>(dispatch)=>{
+export const signup=({email,password,name})=>(dispatch)=>{
   console.log(email,password)
    return fetch("http://localhost:8080/users",{
       method:"POST",
       headers:{"content-type":"application/json",},
       body:JSON.stringify({
          email:`${email}`,
-         password:`${password}`
+         password:`${password}`,
+         name:`${name}`
       })
     })
 }
