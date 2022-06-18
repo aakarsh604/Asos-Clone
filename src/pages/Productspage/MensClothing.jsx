@@ -86,7 +86,7 @@ const MensClothing = () => {
         style={{ border: "1px solid grey", width: "100%", height: "220px" }}
       >
         <div className={styles.headline}>
-          <h1>Men's New in: Shoes</h1>
+          <h1>Men's New in: Men Clothes</h1>
           <p>
             If you needed another excuse to build on your footwear collection,
             our edit of men's new shoes is a pretty good one. We've rounded up

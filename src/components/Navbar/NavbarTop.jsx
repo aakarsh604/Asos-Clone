@@ -15,7 +15,7 @@ const NavbarTop = () => {
   return (
     <Navbar expand="lg" bg="black" variant="dark" color="white">
       <Container fluid>
-        <Navbar.Brand href="/" className="brand_name">
+        <Navbar.Brand as={Link} to="/" className="brand_name">
           asos
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -25,8 +25,8 @@ const NavbarTop = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="/products">MEN</Nav.Link>
-            <Nav.Link href="#action2">WOMEN</Nav.Link>
+            <Nav.Link as={Link} to="/men">MEN</Nav.Link>
+            <Nav.Link as={Link} to="/women">WOMEN</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <Searchbar />
