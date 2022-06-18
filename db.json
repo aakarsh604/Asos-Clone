@@ -736,26 +736,6 @@
       "name": "rovin",
       "email": "rovin7678",
       "password": "12345678"
-    },
-    {
-      "email": "undefined",
-      "password": "undefined",
-      "id": 2
-    },
-    {
-      "email": "undefined",
-      "password": "undefined",
-      "id": 3
-    },
-    {
-      "email": "undefined",
-      "password": "undefined",
-      "id": 4
-    },
-    {
-      "email": "undefined",
-      "password": "undefined",
-      "id": 5
     }
   ]
 }

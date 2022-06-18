@@ -40,9 +40,7 @@ const Checkout = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getItemApi());
-
-    return () => {};
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     const getcountry = async () => {
@@ -70,15 +68,21 @@ const Checkout = () => {
     console.log(countryId);
     setCountryId(countryId);
   };
-  let  total1 = cartData.reduce((acu,el)=>(Number(acu)+(Number(el.price) * Number(el.quantity))),0)
+
+  const handleOnClick = () => {
+    window.location.href = "https://dazzling-starburst-fbd186.netlify.app";
+  };
+  let total1 = cartData.reduce(
+    (acu, el) => Number(acu) + Number(el.price) * Number(el.quantity),
+    0
+  );
   if (getItemCart.loading) {
     return (
       <div>
         <Progress size="lg" isIndeterminate />
       </div>
     );
-  }
-  else if (getItemCart.error) {
+  } else if (getItemCart.error) {
     return (
       <div>
         <Stack spacing={3}>
@@ -112,7 +116,11 @@ const Checkout = () => {
               <div className={styles.countryLeft}>
                 <h1 className={styles.boldLargeText}>DELIVERY COUNTRY:</h1>
                 <div className={styles.countryBox}>
-                  <img className={styles.countryImage} src={countryImage.img} alt="" />
+                  <img
+                    className={styles.countryImage}
+                    src={countryImage.img}
+                    alt=""
+                  />
                   <select
                     name="country"
                     className={styles.form_controlp_2}
@@ -176,7 +184,9 @@ const Checkout = () => {
                           </UnorderedList>
                         </TabPanel>
                         <TabPanel>
-                          <h1 className={styles.boldLargeText}>ADD A VOUCHER</h1>
+                          <h1 className={styles.boldLargeText}>
+                            ADD A VOUCHER
+                          </h1>
                           <br />
                           <p mt="30">16-DIGIT VOUCHER CODE:</p>
                           <Input size="lg" />
@@ -208,9 +218,9 @@ const Checkout = () => {
             </div>
             <div className={styles.grid4}>
               <Accordion defaultIndex={[0]} allowMultiple>
-               
                 <AccordionItem>
-                <h1 className={styles.addressD}>DELIVERY ADDRESS </h1> <button className={styles.addressBtn}>
+                  <h1 className={styles.addressD}>DELIVERY ADDRESS </h1>{" "}
+                  <button className={styles.addressBtn}>
                     <AccordionButton type="button">Add Address</AccordionButton>
                   </button>
                   <AccordionPanel pb={4}>
@@ -337,7 +347,9 @@ const Checkout = () => {
               <div className={styles.payment}>
                 <div className={styles.pay1}>
                   <Icon h="60px" ml="14px" w="22px" as={FaCreditCard} />
-                  <h1 className={styles.smallBoldText}>ADD CREDIT/DEBIT CARD</h1>
+                  <h1 className={styles.smallBoldText}>
+                    ADD CREDIT/DEBIT CARD
+                  </h1>
                 </div>
                 <div className={styles.pay2}>
                   <h1>OR</h1>
@@ -357,7 +369,14 @@ const Checkout = () => {
                 />
               </div>
             </div>
-            <button className={styles.payBtn}>PLACE ORDER</button>
+            <button
+              className={styles.payBtn}
+              onClick={() => {
+                handleOnClick();
+              }}
+            >
+              PLACE ORDER
+            </button>
             <br></br>
             <br></br>
             <div className={styles.lastPara}>
@@ -374,20 +393,25 @@ const Checkout = () => {
           </div>
 
           <div className={styles.rightBox}>
-            <div className={styles.totalEdit}><h1 className={styles.totalItem}>{cartData.length} ITEMS</h1> <Link to={"/cart"}><button className={styles.btn4}>EDIT</button></Link></div>
-           {cartData.map((el) => (
-                <CartItem key={el.id} item={el}  />
-              ))}
-              <div className={styles.subTpay}>
-                <div className={styles.subTotal}>
-                  <h1 className={styles.sub_total}>Subtotal</h1>
+            <div className={styles.totalEdit}>
+              <h1 className={styles.totalItem}>{cartData.length} ITEMS</h1>{" "}
+              <Link to={"/cart"}>
+                <button className={styles.btn4}>EDIT</button>
+              </Link>
+            </div>
+            {cartData.map((el) => (
+              <CartItem key={el.id} item={el} />
+            ))}
+            <div className={styles.subTpay}>
+              <div className={styles.subTotal}>
+                <h1 className={styles.sub_total}>Subtotal</h1>
                 <h1 className={styles.sub_price}>{`£${total1.toFixed(2)}`}</h1>
-                </div>
-                <div className={styles.totalPay}>
-                  <h1 className={styles.t_pay}>TOTAL TO PAY</h1>
-                  <h1 className={styles.t_price}>{`£${total1.toFixed(2)}`}</h1>
-                </div>
               </div>
+              <div className={styles.totalPay}>
+                <h1 className={styles.t_pay}>TOTAL TO PAY</h1>
+                <h1 className={styles.t_price}>{`£${total1.toFixed(2)}`}</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
