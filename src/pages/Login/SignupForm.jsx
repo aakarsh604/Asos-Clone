@@ -9,6 +9,7 @@ const SignupForm = () => {
     const [email,setEmail]=useState("");
     const [name,SetName]=useState("");
     const [password,setPassword]=useState("");
+    const [secondName, setSecondName] = useState("");
     const navigate=useNavigate();
     const dispatch=useDispatch();
     const handleFormEvent=(e)=>{
@@ -24,7 +25,7 @@ const SignupForm = () => {
       <label>FIRST NAME:</label>
       <input type="text" className={styles.input} value={name}  onChange={(e)=>SetName(e.target.value)} />
       <label>LAST NAME:</label>
-      <input type="text" className={styles.input} value={"Singh"}/>
+      <input type="text" className={styles.input} value={secondName} onChange={(e)=>setSecondName(e.target.value)}/>
       <label>PASSWORD:</label>
       <input type="password" className={styles.input} value={password} onChange={(e)=>setPassword(e.target.value)}/>
       <label>DATE OF BIRTH:</label>
