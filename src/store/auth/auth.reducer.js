@@ -26,14 +26,14 @@ export const authReducer = (state = initialState, { type, payload }) => {
     }
     case LOGIN_SUCCESS: {
       localStorage.setItem("token", payload.token);
-      localStorage.setItem("profile", payload.email);
+      localStorage.setItem("profile", payload.name);
       return {
         ...state,
         loading: false,
         error: false,
         isAuth: true,
         token: payload.token,
-        profile: payload.email,
+        profile: payload.name,
       };
     }
     case LOGIN_ERROR: {

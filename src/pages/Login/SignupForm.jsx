@@ -12,7 +12,7 @@ const SignupForm = () => {
     const dispatch=useDispatch();
     const handleFormEvent=(e)=>{
         e.preventDefault();
-        dispatch(signup(email,password));
+        dispatch(signup({email,password}));
         navigate("/login")
     }
   return (

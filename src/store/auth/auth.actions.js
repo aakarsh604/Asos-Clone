@@ -12,7 +12,8 @@ export const loginReq = ({email,password}) => (dispatch) => {
     })
       .then((res) => {
        if(res.data.length>0){
-        dispatch({type:LOGIN_SUCCESS,payload:{token:"QpwL5tke4Pnpja7X4",email:email}})
+        console.log(res.data[0].name)
+        dispatch({type:LOGIN_SUCCESS,payload:{token:"QpwL5tke4Pnpja7X4",name:res.data[0].name}})
        }
       })
       .catch((err) => {

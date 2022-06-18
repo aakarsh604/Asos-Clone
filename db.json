@@ -734,7 +734,13 @@
     {
       "id": 1,
       "name": "rovin",
-      "email": "rovin7678",
+      "email": "rovin7678@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "name": "deepanshu",
+      "email": "deepanshuchugh24@gmail.com",
       "password": "12345678"
     }
   ]
