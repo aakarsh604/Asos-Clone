@@ -23,13 +23,16 @@ const CartItem = ({ item }) => {
       
        
         <div key={item.id} className={styles.leftDivTwo}>
+        
         <img className={styles.imgPrd} src={item.Image} alt="cart" />
-       
+      
         <div className={styles.itemDiv}>
-        <Link to={`/productdetails/${item.id}`} state={from}>
+       
           <div className={styles.itemDetails}>
+          <Link to={`/productdetails/${item.id}`} state={from}>
             <p className={styles.price1}>{`£${item.price}`}</p>
             <p className={styles.name1}>{item.productName}</p>
+            </Link>
             <div className={styles.colorSize}>
               {" "}
               <span>{item.color}</span>
@@ -71,7 +74,7 @@ const CartItem = ({ item }) => {
 
             <p className={styles.later}>Save for later</p>
           </div>
-          </Link>
+          
           <div>
             {" "}
             <CloseButton

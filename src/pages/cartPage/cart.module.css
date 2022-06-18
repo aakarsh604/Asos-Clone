@@ -49,7 +49,6 @@
     text-align: left;
     padding-right: 20px;
     box-sizing: border-box;
-    cursor: pointer;
 }
 .colorSize{
     display: flex;
