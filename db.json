@@ -703,33 +703,6 @@
   ],
   "cartItem": [
     {
-      "productName": "ASOS DESIGN relaxed revere linen mix shirt in scribble conversational print",
-      "Image": "https://images.asos-media.com/products/asos-design-relaxed-revere-linen-mix-shirt-in-scribble-conversational-print/202212414-1-beige?$n_640w$&wid=513&fit=constrain",
-      "price": "80.00",
-      "size": "S",
-      "color": "Rainbow",
-      "quantity": 1,
-      "id": 19
-    },
-    {
-      "productName": "ASOS DESIGN satin wrap shirt with single button in brown",
-      "Image": "https://images.asos-media.com/products/asos-design-satin-wrap-shirt-with-single-button-in-brown/201188813-1-taupe?$n_320w$&wid=317&fit=constrain",
-      "price": "9.75",
-      "size": "M",
-      "color": "TAUPE",
-      "quantity": 1,
-      "id": 20
-    },
-    {
-      "productName": "UGG Kianna faux fur jacket in black",
-      "Image": "https://images.asos-media.com/products/ugg-kianna-faux-fur-jacket-in-black/24292303-1-black?$n_320w$&wid=317&fit=constrain",
-      "price": "65.25",
-      "size": "XS",
-      "color": "Black",
-      "quantity": 1,
-      "id": 41
-    },
-    {
       "productName": "Wrangler t-shirt with americana print in black",
       "Image": "https://images.asos-media.com/products/wrangler-t-shirt-with-americana-print-in-black/201262477-1-black?$n_640w$&wid=513&fit=constrain",
       "price": "18.00",
@@ -737,6 +710,15 @@
       "color": "BLACK",
       "quantity": 1,
       "id": 26
+    },
+    {
+      "productName": "ASOS DESIGN co-ord embellished floral mini dress in fil coupe - LGREEN and skirt",
+      "Image": "https://images.asos-media.com/groups/asos-design-co-ord-embellished-floral-mini-dress-in-fil-coupe-lgreen-and-skirt/72527-group-1?$n_640w$&wid=513&fit=constrain",
+      "price": "21.25",
+      "size": "XS",
+      "color": "Teal",
+      "quantity": 1,
+      "id": 34
     }
   ],
   "users": [
@@ -785,6 +767,30 @@
       "password": "123456",
       "name": "Aakarsh",
       "id": 10
+    },
+    {
+      "email": "aakarsh604@gmail.com",
+      "password": "123456",
+      "name": "Aakarsh",
+      "id": 11
+    },
+    {
+      "email": "aakarsh604@gmail.com",
+      "password": "1234567",
+      "name": "Aakarsh",
+      "id": 12
+    },
+    {
+      "email": "aakarsh604@gmail.com",
+      "password": "1234",
+      "name": "Aakarsh",
+      "id": 13
+    },
+    {
+      "email": "aakarsh604@gmail.com",
+      "password": "12345",
+      "name": "Aakarsh",
+      "id": 14
     }
   ]
 }

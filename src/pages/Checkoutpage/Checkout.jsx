@@ -214,7 +214,7 @@ const Checkout = () => {
             <div className={styles.grid3}>
               <h1 className={styles.boldLargeText}>EMAIL ADDRESS</h1>
               {/* todo */}
-              <p className={styles.paraText}>DeepanshuChugh24@gmail.com </p>
+              <p className={styles.paraText}>Aakarsh604@gmail.com</p>
             </div>
             <div className={styles.grid4}>
               <Accordion defaultIndex={[0]} allowMultiple>

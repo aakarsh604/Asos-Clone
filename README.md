@@ -34,6 +34,7 @@ Clone the project
 
 ```bash
 #   https://github.com/aakarsh604/Asos-Clone
+#   run json server on local host on  port 8080
 ```
 
 
