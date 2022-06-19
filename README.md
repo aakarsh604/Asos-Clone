@@ -4,10 +4,10 @@ ASOS is a British online fashion and cosmetic retailer. The company was founded 
 
 # ASOS CLone
 
-This is the clone of ASOS which we have done during our Unit 4 construct week at Masai. Its functional clone of the website. 
+This is the clone of ASOS website which we have done during our Unit 4 construct week at Masai. Its functional clone of the website. 
 ## Technologies used
 
--HTML
+- HTML
 - Javascript
 - CSS
 - React
@@ -20,7 +20,7 @@ This is the clone of ASOS which we have done during our Unit 4 construct week at
 - Home page
 - 3 product pages with data managed with json server
 - Sorting and Filtering functionality
-- Cart quantity updation
+- Cart Page with size & quantity updation
 - Checkout page 
 - Payment page with payment confirmation
 
@@ -34,13 +34,13 @@ Clone the project
 
 ```bash
 #   https://github.com/aakarsh604/Asos-Clone
-#   run json server on local host on  port 8080
+#   run json server on local host on port 8080
 ```
 
 
 ## Website Flow
 
-- Signup and Login pages by Rovin and Deepanshu
+- Signup & Login pages by Rovin and Deepanshu
 ![](./src//assets/LoginPage.png)
 
 - Homepage, Men & Women pages by Aakarsh
