@@ -719,6 +719,15 @@
       "color": "Teal",
       "quantity": 1,
       "id": 34
+    },
+    {
+      "productName": "Nike Running Wildhorse 7 trainers in khaki",
+      "Image": "https://images.asos-media.com/products/nike-air-force-1-luxe-trainers-with-chunky-gum-sole-in-black/23592550-1-black?$n_320w$&wid=317&fit=constrain",
+      "price": "110.09",
+      "size": "M",
+      "color": "Khaki",
+      "quantity": 1,
+      "id": 9
     }
   ],
   "users": [
@@ -791,6 +800,12 @@
       "password": "12345",
       "name": "Aakarsh",
       "id": 14
+    },
+    {
+      "email": "aakarsh604@gmail.com",
+      "password": "123",
+      "name": "Aakarsh",
+      "id": 15
     }
   ]
 }
