@@ -11,6 +11,7 @@ This is the clone of ASOS website which we have done during our Unit 4 construct
 - Javascript
 - CSS
 - React
+- Redux
 - Chakra UI
 - Json Server
 
