@@ -1,6 +1,5 @@
-import { Radio, RadioGroup, Stack } from '@chakra-ui/react'
+import { Radio, RadioGroup, Stack, useToast } from '@chakra-ui/react'
 import {useDispatch} from "react-redux"
-import {useNavigate} from "react-router-dom"
 import React, { useState } from 'react'
 import styles from './login.module.css'
 import './login.css'
@@ -10,13 +9,19 @@ const SignupForm = () => {
     const [name,SetName]=useState("");
     const [password,setPassword]=useState("");
     const [secondName, setSecondName] = useState("");
-    const navigate=useNavigate();
     const dispatch=useDispatch();
+    const toast = useToast();
     const handleFormEvent=(e)=>{
         e.preventDefault();
         let payload = {name,email, password}
         dispatch(signup(payload));
-        navigate("/login")
+        toast({
+          title: `Signup successfull !`,
+          status: "success",
+          position: "top",
+          isClosable: true,
+          color:"white"
+        })
     }
   return (
     <form className={styles.form}>

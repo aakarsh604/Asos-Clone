@@ -37,7 +37,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
       };
     }
     case LOGIN_ERROR: {
-      return { ...state };
+      return { ...state, loading: false, error: false, isAuth: false };
     }
     case LOGOUT: {
       localStorage.removeItem("token");
