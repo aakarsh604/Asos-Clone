@@ -706,9 +706,9 @@
       "productName": "Wrangler t-shirt with americana print in black",
       "Image": "https://images.asos-media.com/products/wrangler-t-shirt-with-americana-print-in-black/201262477-1-black?$n_640w$&wid=513&fit=constrain",
       "price": "18.00",
-      "size": "L",
+      "size": "M",
       "color": "BLACK",
-      "quantity": 1,
+      "quantity": 2,
       "id": 26
     },
     {
@@ -717,7 +717,7 @@
       "price": "21.25",
       "size": "XS",
       "color": "Teal",
-      "quantity": 1,
+      "quantity": 3,
       "id": 34
     },
     {
@@ -728,6 +728,15 @@
       "color": "Khaki",
       "quantity": 1,
       "id": 9
+    },
+    {
+      "productName": "ASOS DESIGN relaxed revere linen mix shirt in scribble conversational print",
+      "Image": "https://images.asos-media.com/products/asos-design-relaxed-revere-linen-mix-shirt-in-scribble-conversational-print/202212414-1-beige?$n_640w$&wid=513&fit=constrain",
+      "price": "80.00",
+      "size": "XS",
+      "color": "Rainbow",
+      "quantity": 1,
+      "id": 19
     }
   ],
   "users": [
@@ -806,6 +815,48 @@
       "password": "123",
       "name": "Aakarsh",
       "id": 15
+    },
+    {
+      "email": "aakarsh604@gmail.com",
+      "password": "12345",
+      "name": "Aakarsh",
+      "id": 16
+    },
+    {
+      "email": "aakarsh604@gmail.com",
+      "password": "67890",
+      "name": "Aakarsh",
+      "id": 17
+    },
+    {
+      "email": "aakarsh604@gmail.com",
+      "password": "63635",
+      "name": "Aakarsh",
+      "id": 18
+    },
+    {
+      "email": "ramesh@gmail.com",
+      "password": "123456",
+      "name": "Ramesh",
+      "id": 19
+    },
+    {
+      "email": "srinivas@gmail.com",
+      "password": "srinivas",
+      "name": "Srinivas",
+      "id": 20
+    },
+    {
+      "email": "srinivas@gmail.com",
+      "password": "srinivas",
+      "name": "Srinivas",
+      "id": 21
+    },
+    {
+      "email": "sri@gmail.com",
+      "password": "12345",
+      "name": "sri",
+      "id": 22 
     }
   ]
 }
