@@ -13,7 +13,8 @@ import Footer from './components/footer/Footer';
 import WomenPage from './pages/Womenpage/WomenPage';
 import Homepage from './pages/Home/Homepage';
 import Checkout from './pages/Checkoutpage/Checkout';
-import RequiredAuth from './hoc/RequiredAuth';
+import RequiredAuth from "./hoc/RequiredAuth"
+import Errorpage from './pages/Error/Errorpage';
 function App() {
   return (
     <div className="App">
@@ -25,14 +26,15 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/productdetails/:id' element={<ProductDetails />} />
         <Route path='/cart' element={
-          <RequiredAuth>
+         <RequiredAuth>
             <Cart />
-          </RequiredAuth>
+         </RequiredAuth>
         } />
         <Route path='/products/shoes' element={<Shoes />}></Route>
         <Route path='/products/mensclothing' element={<MensClothing />}></Route>
         <Route path='/products/womensclothing' element={<WomensClothing />}></Route>
         <Route path='/checkoutpage' element={<Checkout />} />
+        <Route path='/*' element={<Errorpage/>} />
       </Routes>
       <Footer />
     </div>
