@@ -11,6 +11,7 @@ This is the clone of ASOS website which we have done during our Unit 4 construct
 - Javascript
 - CSS
 - React
+- Redux
 - Chakra UI
 - Json Server
 
@@ -64,3 +65,6 @@ Clone the project
 - [Saurav Samui](https://github.com/sauravsamui)
 - [Manish Singh](https://github.com/ManishSingh64)
 - [Rovin Singh](https://github.com/rovin-singh)
+
+
+Live Link :  "https://papaya-tarsier-65f2d1.netlify.app/"

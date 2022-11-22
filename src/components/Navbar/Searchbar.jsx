@@ -12,11 +12,11 @@ const Searchbar = () => {
                 .then(res => {
                     const contacts = res.data
                     setSearchData(contacts)
-                    console.log(SearchData);
+                    // console.log(SearchData);
                 })
         }, [search])   
         const onSubmit=()=>{
-            console.log("contact:",SearchData);
+            // console.log("contact:",SearchData);
             setSearch("");
         } 
     return (

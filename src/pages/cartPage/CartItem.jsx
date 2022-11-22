@@ -12,7 +12,7 @@ const CartItem = ({ item }) => {
   const location = useLocation()
   const quantityRef = useRef(item.quantity);
   let handleUpdate = () => {
-     dispatch(updateCartApi(item.id,quantityRef.current,sizeRef.current,))
+     dispatch(updateCartApi(item._id,quantityRef.current,sizeRef.current,))
      setFlag(!flag)
   };
   let from = {
@@ -80,7 +80,7 @@ const CartItem = ({ item }) => {
             <CloseButton
               size="lg"
               onClick={() => {
-                dispatch(removeCartApi(item.id));
+                dispatch(removeCartApi(item._id));
               }}
             />
           </div>

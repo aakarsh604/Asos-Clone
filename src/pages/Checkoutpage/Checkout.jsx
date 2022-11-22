@@ -65,7 +65,7 @@ const Checkout = () => {
 
   const handleOnChange = (e) => {
     const countryId = e.target.value;
-    console.log(countryId);
+    // console.log(countryId);
     setCountryId(countryId);
   };
 

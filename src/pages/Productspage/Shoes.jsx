@@ -8,9 +8,13 @@ import {
   Stack,
 } from "@chakra-ui/react";
 
-import styles from './Shoes.module.css';
+import styles from "./Shoes.module.css";
 import { useEffect } from "react";
-import { showProducts, sort } from "../../store/ProductsStore/products.action";
+import {
+  filterData,
+  showProducts,
+  sort,
+} from "../../store/ProductsStore/products.action";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 
@@ -18,23 +22,18 @@ const Shoes = () => {
   const dispatch = useDispatch();
   const { loading, error, data } = useSelector((state) => state.products);
   const location = useLocation();
-  const from ={
-     pathname: location.pathname
-  }
+  const from = {
+    pathname: location.pathname,
+  };
   useEffect(() => {
     // console.log("useEffect");
 
-    showProducts(dispatch,"Shoes");
+    showProducts(dispatch, "shoe");
   }, [dispatch]);
 
   const handleOnSelect = (e) => {
-    // e.preventDefault()
     const { value } = e.target;
-    console.log(value);
-    // let keys = Object.keys(data[1]);
-    // console.log('keys',keys)
-
-    sort(dispatch, value, data, "Shoes");
+    filterData(dispatch,"shoe", value);
   };
 
   if (loading)
@@ -49,7 +48,7 @@ const Shoes = () => {
         <h1>SOMETHING WENT WRONG.......</h1>
       </div>
     );
-  console.log(data, "jsx");
+  // console.log(data, "jsx");
   return (
     <div>
       <div
@@ -69,10 +68,7 @@ const Shoes = () => {
             </BreadcrumbItem>
 
             <BreadcrumbItem>
-              <BreadcrumbLink
-                href="/menpage"
-                fontSize="14px"
-              >
+              <BreadcrumbLink href="/menpage" fontSize="14px">
                 Men
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -91,7 +87,10 @@ const Shoes = () => {
           </Breadcrumb>
         </div>
       </div>
-      <div className={styles.headline_box} style={{ border: "1px solid grey", width: "100%", height: "220px" }}>
+      <div
+        className={styles.headline_box}
+        style={{ border: "1px solid grey", width: "100%", height: "220px" }}
+      >
         <div className={styles.headline}>
           <h1>Men's New in: Shoes</h1>
           <p>
@@ -107,8 +106,13 @@ const Shoes = () => {
         </div>
       </div>
       <div className={styles.filter_box}>
-        <Flex className={styles.flex_box} position="relative" top={2} left={110}>
-        {/* <div className={styles.flex_box}> */}
+        <Flex
+          className={styles.flex_box}
+          position="relative"
+          top={2}
+          left={110}
+        >
+          {/* <div className={styles.flex_box}> */}
           <Stack spacing={3}>
             <Select
               variant="filled"
@@ -117,8 +121,8 @@ const Shoes = () => {
               onChange={(e) => handleOnSelect(e)}
             >
               <option value="What's new">What's new</option>
-              <option value="DESC">Price high to low</option>
-              <option value="ASC">Price low to high</option>
+              <option value="desc">Price high to low</option>
+              <option value="asc">Price low to high</option>
             </Select>
             <Select variant="filled" placeholder="New in date" w={200} />
           </Stack>
@@ -138,14 +142,13 @@ const Shoes = () => {
           <Stack spacing={3}>
             <Select
               variant="filled"
-              placeholder="Color"
+              placeholder="All Color"
               w={200}
               ml={3}
               onChange={(e) => handleOnSelect(e)}
             >
-              <option value="none">All Colors</option>
               <option value="Black">black</option>
-              <option value="Orange">orange</option>
+              <option value="ORANGE">orange</option>
               <option value="Green">green</option>
               <option value="White">white</option>
               <option value="Blue">blue</option>
@@ -168,17 +171,17 @@ const Shoes = () => {
 
       <div className={styles.products}>
         {data.map((el) => (
-          <div id={styles.items} key={el.id}>
-          <Link to={`/productdetails/${el.id}`} state={from}>
-          <img src={el.Image} alt="" />
-          <div id={styles.name_div}>
-            <h2> {el.Brand_Name}</h2>
+          <div id={styles.items} key={el._id}>
+            <Link to={`/productdetails/${el._id}`} state={from}>
+              <img src={el.Image} alt="" />
+              <div id={styles.name_div}>
+                <h2> {el.Brand_Name}</h2>
+              </div>
+              <div id={styles.price_div}>
+                <h3>{`£ ${+el.Price}`}</h3>
+              </div>
+            </Link>
           </div>
-          <div id={styles.price_div}>
-            <h3>{`£ ${+(el.Price)}`}</h3>
-          </div>
-          </Link>
-        </div>
         ))}
       </div>
     </div>

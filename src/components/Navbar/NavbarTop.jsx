@@ -17,9 +17,9 @@ import { logoutReq } from "../../store/auth/auth.actions";
 const NavbarTop = () => {
   const dispatch=useDispatch();
   const {isAuth,profile} =useSelector((state)=>state.auth);
-  console.log(isAuth,profile)
+  // console.log(isAuth,profile)
   const handledLogout=()=>{
-    console.log("logout")
+    // console.log("logout")
     dispatch(logoutReq())
   }
   return (
