@@ -38,16 +38,17 @@ const ProductDetails = () => {
 
   let prevLocation;
   if (location.state.pathname === "/products/mensclothing") {
-    prevLocation = "MEN";
+    prevLocation = "men";
   } else if (location.state.pathname === "/products/womensclothing") {
-    prevLocation = "WOMEN";
+    prevLocation = "women";
   } else if(location.state.pathname==='/products/shoes'){
-    prevLocation = "SHOES"
+    prevLocation = "shoe"
   }
   else {
     prevLocation = "";
   }
   
+
   const {
     detailsData: productDetails,
     getProductDetails,
@@ -58,10 +59,10 @@ const ProductDetails = () => {
   const [selectSize, setSelectSize] = useState(false);
   const [show, setShow] = React.useState(false);
   const { id } = useParams();
-  console.log(id)
+  // console.log(id)
 
   useEffect(() => {
-    dispatch(getproductdetailsApi(id));
+    dispatch(getproductdetailsApi(id,prevLocation));
     return () => {};
   }, [id]);
 

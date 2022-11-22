@@ -1,4 +1,5 @@
 import {
+  DESC,
   PRODUCTS_ERROR,
   PRODUCTS_LOADING,
   PRODUCTS_SUCESS,
@@ -9,6 +10,7 @@ let initialState = {
   loading: false,
   error: false,
   data: [],
+  filteredData:[]
   // sortedData:[]
 };
 
@@ -23,15 +25,6 @@ export const productsReducer = (state = initialState, { type, payload }) => {
     }
     case PRODUCTS_SUCESS: {
       // console.log(payload) payload :[el,el,el.....]
-      return {
-        ...state,
-        loading: false,
-        error: false,
-        data: payload,
-      };
-    }
-
-    case SORT_PRODUCTS: {
       return {
         ...state,
         loading: false,

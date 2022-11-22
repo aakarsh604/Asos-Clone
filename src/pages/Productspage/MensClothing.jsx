@@ -10,7 +10,7 @@ import {
 
 import styles from "./Shoes.module.css";
 import { useEffect } from "react";
-import { showProducts, sort } from "../../store/ProductsStore/products.action";
+import { filterData, showProducts, sort } from "../../store/ProductsStore/products.action";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 
@@ -30,11 +30,7 @@ const MensClothing = () => {
   const handleOnSelect = (e) => {
     // e.preventDefault()
     const { value } = e.target;
-    console.log(value);
-    // let keys = Object.keys(data[1]);
-    // console.log('keys',keys)
-
-    sort(dispatch, value, data, "Men");
+    filterData(dispatch,"men",value);
   };
 
   if (loading)
@@ -110,8 +106,8 @@ const MensClothing = () => {
               onChange={(e) => handleOnSelect(e)}
             >
               <option value="What's new">What's new</option>
-              <option value="DESC">Price high to low</option>
-              <option value="ASC">Price low to high</option>
+              <option value="desc">Price high to low</option>
+              <option value="asc">Price low to high</option>
             </Select>
             <Select variant="filled" placeholder="New in date" w={200} />
           </Stack>
@@ -161,8 +157,8 @@ const MensClothing = () => {
 
       <div className={styles.products}>
         {data.map((el) => (
-          <div id={styles.items} key={el.id}>
-            <Link to={`/productdetails/${el.id}`} state={from}>
+          <div id={styles.items} key={el._id}>
+            <Link to={`/productdetails/${el._id}`} state={from}>
               <img src={el.Image} alt="" />
               <div id={styles.name_div}>
                 <h2> {el.Brand_Name}</h2>

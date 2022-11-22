@@ -52,7 +52,7 @@ let  total1 = cartData.reduce((acu,el)=>(Number(acu)+(Number(el.price) * Number(
             </div>
             <div className={styles.leftDivTwoUper} >
               {cartData.map((el) => (
-                <CartItem key={el.id} item={el}  />
+                <CartItem key={el._id} item={el}  />
               ))}
             </div>
             <div className={styles.leftDivThree}>
