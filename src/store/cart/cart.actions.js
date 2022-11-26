@@ -22,7 +22,7 @@ let userId = localStorage.getItem("userId");
 export const getItemApi = () => (dispatch) => {
   dispatch({ type: GET_ITEM_CART_LOADING });
   axios
-    .get(`https://asos.onrender.com/cart/${userId}`, {
+    .get(`https://asos.onrender.com/cart`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -36,6 +36,7 @@ export const getItemApi = () => (dispatch) => {
 };
 
 export const addCartApi = (item, s) => (dispatch) => {
+  console.log("add")
   dispatch({ type: ADD_TO_CART_LOADING });
   let token = localStorage.getItem("token");
   let obj = {
@@ -61,7 +62,7 @@ export const addCartApi = (item, s) => (dispatch) => {
 };
 
 export const removeCartApi = (id) => (dispatch) => {
-   console.log('in remove')
+  console.log("in remove");
   dispatch({ type: REMOVE_FROM_CART_LOADING });
 
   axios
@@ -72,39 +73,40 @@ export const removeCartApi = (id) => (dispatch) => {
       },
     })
     .then((res) => {
-      axios.get(`https://asos.onrender.com/cart/${userId}`, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }).then((res) => {
-         // console.log(res,'deleted')
-         dispatch({ type: GET_ITEM_CART_SUCCESS, payload: res.data });
-      })
+      axios
+        .get(`https://asos.onrender.com/cart`, {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((res) => {
+          // console.log(res,'deleted')
+          dispatch({ type: GET_ITEM_CART_SUCCESS, payload: res.data });
+        });
     })
     .catch((r) => dispatch({ type: REMOVE_FROM_CART_ERROR }));
 };
 
 export const updateCartApi = (id, quantity, size) => (dispatch) => {
+  console.log(id, "updated");
   dispatch({ type: UPDATE_CART_LOADING });
-  let obj = {size:size, quantity:quantity}
+  let obj = { size: size, quantity: quantity };
+  console.log(obj);
   axios
-    .patch(`https://asos.onrender.com/cart/${id}/edit`,{obj}, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    })
-    .then((res) => {
-      axios.get(`https://asos.onrender.com/cart/${userId}`, {
+    .patch(
+      `https://asos.onrender.com/cart/${id}/edit`,
+      obj,
+      {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-      }).then((res) => {
-         // console.log(res,'deleted')
-         dispatch({ type: GET_ITEM_CART_SUCCESS, payload: res.data });
-      })
+      }
+    )
+    .then((res) => {
+      console.log(res, "updated");
+      dispatch({ type: GET_ITEM_CART_SUCCESS, payload: res.data }); 
     })
     .catch((r) => dispatch({ type: REMOVE_FROM_CART_ERROR }));
 };

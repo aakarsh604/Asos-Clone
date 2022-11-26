@@ -17,7 +17,7 @@ const Cart = () => {
 
     return () => {};
   }, []);
-
+ console.log(cartData)
 let  total1 = cartData.reduce((acu,el)=>(Number(acu)+(Number(el.price) * Number(el.quantity))),0)
   if (getItemCart.loading) {
     return (

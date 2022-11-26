@@ -13,12 +13,15 @@ export const loginReq =
     // loading
     dispatch({ type: LOGIN_LOADING });
     // success
-    axios.post(`https://asos.onrender.com/user/login`,{email,password}).then((res) => {
-
-      dispatch({type:LOGIN_SUCCESS,payload:res.data})
-    }).catch((err) => {
-       dispatch({type:LOGIN_ERROR})
-    })
+    axios
+      .post(`https://asos.onrender.com/user/login`, { email, password })
+      .then((res) => {
+        console.log(res,'ogin')
+        dispatch({ type: LOGIN_SUCCESS, payload: res.data });
+      })
+      .catch((err) => {
+        dispatch({ type: LOGIN_ERROR });
+      });
   };
 
 export const logoutReq = () => (dispatch) => {
